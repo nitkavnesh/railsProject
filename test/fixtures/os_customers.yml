@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cust_name: MyString
+  cus_email: MyString
+  cus_phone_no: 1
+  cus_password: MyString
+
+two:
+  cust_name: MyString
+  cus_email: MyString
+  cus_phone_no: 1
+  cus_password: MyString
