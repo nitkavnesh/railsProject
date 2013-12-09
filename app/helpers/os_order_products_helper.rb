@@ -1,0 +1,2 @@
+module OsOrderProductsHelper
+end

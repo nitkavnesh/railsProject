@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
 end

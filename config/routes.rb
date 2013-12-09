@@ -1,4 +1,12 @@
 Onlineshopping::Application.routes.draw do
+  get "os_shipment_details/index"
+  get "os_order_products/index"
+  get "os_orders/index"
+  get "os_addresses/index"
+  get "os_customers/index"
+  get "os_products/index"
+  get "os_brands/index"
+  get "os_categories/index"
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
