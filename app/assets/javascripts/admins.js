@@ -39,21 +39,9 @@
  		$("#orders_show").show();
        		
     	}); 
-    	 $('#popuplink').click(function(){
-        
-        
-        $('#popup').show("slow");
+    	 
     
-    });
-    
-     $('#popupclose').click(function(){
-        
-        var text=$('#popuptext').val();
-        alert(text);
-        $('#popup').hide("slow");
-    
-    });
-
+     
 
   });
   
