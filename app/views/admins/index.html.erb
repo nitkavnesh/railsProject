@@ -8,29 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Starter Template for Bootstrap</title>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script>
-
-    $(document).ready(function()
-    {
-    $("#products").show();
-    $("#customers","#orders").hide();
-
-    $("#customers").onclick({
-      $("#customers").show();
-      $("#products","#orders").hide();
-    });
-     $("#orders").onclick({
-      $("#orders").show();
-      $("#customers","#orders").hide();
-    });
-      $("#products").onclick({
-        $("#products").show();
-      $("#customers","#orders").hide();
-    });
-    });
-    </script>
-
   </head>
 
   <body>
@@ -48,9 +25,9 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">products</a></li>
-            <li><a href="pp.html">customers</a></li>
-            <li><a href="#">orders</a></li>
+            <li id="products" class="active"><a>products</a></li>
+            <li id="customers"><a>customers</a></li>
+            <li id="orders"><a>orders</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -58,27 +35,42 @@
     <br/>
 
     <div class="container">
-      <div id="products">
-        <div class="row">
+      <div id="products_show">
+        <button class="btn btn-success" id="addproduct">Add new product</button><br/><br/>
+        <div id="selections">
+        <div id="input_form_for_category">
+        <select id="category" style="width: 220px; height: 35px;"  >
+            <option value="selected">select Category-</option>             
+            <option value="mobile">Mobile</option>
+            <option value="laptop">Laptop</option>
+        </select>      
+      </div>
+      <br/>
+      <p> Enter brand  <input type="text" id="brand"></input> </p></br>
+       <p> Enter price <input type="text" id="price"></input> </p></br>
+        <input type="submit"></input> 
+      </div>
+       <div class="row">
           <div class="col-md-2">Product Id</div>
           <div class="col-md-3">Product Name</div>
           <div class="col-md-2">Remaining No. of product</div>
           <div class="col-md-2">Number of product Sold</div>
          </div>
       </div>
-      <div id="customers">
+      <div id="customers_show">
         <div class="col-md-2">Customer Id</div>
           <div class="col-md-3">Customer Name</div>
           <div class="col-md-2">customer Email Id</div>
           <div class="col-md-2">Customer Phone No.</div>
           <div class="col-md-1">Number of Product purchsed</div>
       </div>
-      <div id="orders">
+      <div id="orders_show">
+          <div class="col-md-2">Order No.</div>
           <div class="col-md-2">Customer Id</div>
-          <div class="col-md-3">Customer Name</div>
-          <div class="col-md-2">customer Email Id</div>
+          <div class="col-md-2">Customer Name</div>
           <div class="col-md-2">Customer Phone No.</div>
           <div class="col-md-1">Number of Product purchsed</div>
+          <div class="col-md-1">order Status</div>
         </div>
     </div>
   </body>
