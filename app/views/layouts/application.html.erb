@@ -11,9 +11,22 @@
   <body>
     <header>
 			<%= render 'layouts/navigation' %>
+
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
+       
+       
+<% if os_customer_signed_in? %>
+signed in as <%= current_os_customer.email %>.Not you? 
+<%= link_to "Logout", destroy_os_customer_session_path, :method => :delete  %>
+<% end %>
+
+
+
+
+
+
        <%= yield %>
     </main>
   </body>

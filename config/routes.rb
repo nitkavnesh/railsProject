@@ -1,4 +1,6 @@
 Onlineshopping::Application.routes.draw do
+  devise_for :os_customers, :controllers => { registrations: 'os_customers/registrations'}
+  #devise_for :os_customers
   get "os_shipment_details/index"
   get "os_order_products/index"
   get "os_orders/index"
