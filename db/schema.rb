@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131206121657) do
+ActiveRecord::Schema.define(version: 20131209064710) do
 
   create_table "os_addresses", force: true do |t|
     t.text     "add_address"
@@ -39,13 +39,29 @@ ActiveRecord::Schema.define(version: 20131206121657) do
   end
 
   create_table "os_customers", force: true do |t|
-    t.string   "cust_name"
-    t.string   "cus_email"
-    t.integer  "cus_phone_no"
-    t.string   "cus_password"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cust_name"
+    t.integer  "cust_phone_no"
+    t.string   "cust_type"
   end
+
+  add_index "os_customers", ["email"], name: "index_os_customers_on_email", unique: true, using: :btree
+  add_index "os_customers", ["reset_password_token"], name: "index_os_customers_on_reset_password_token", unique: true, using: :btree
 
   create_table "os_order_products", force: true do |t|
     t.integer  "op_quantity"
@@ -57,6 +73,7 @@ ActiveRecord::Schema.define(version: 20131206121657) do
 
   create_table "os_orders", force: true do |t|
     t.date     "ord_date"
+    t.boolean  "ord_status"
     t.integer  "os_customer_id"
     t.integer  "os_shipment_detail_id"
     t.datetime "created_at"
