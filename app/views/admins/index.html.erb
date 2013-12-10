@@ -33,6 +33,9 @@
       </div>
     </div>
     <br/>
+    <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
 
     <div class="container">
       <div id="products_show">

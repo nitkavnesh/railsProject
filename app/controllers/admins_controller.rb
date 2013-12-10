@@ -6,13 +6,27 @@ class AdminsController < ApplicationController
 	def create
 		
 		@os_category = OsCategory.new(os_category_params)
-		 @os_category.save
+		if @os_category.save
+		else 
+		 	flash[:notice] = "invalid category name"
+            render 'index'
+		 end
 		 @os_brand=OsBrand.new(os_brand_params)
-		 @os_brand.save
-		 @os_product=OsProduct.new(os_product_params)
-		 @os_product.save
-		 
-	end
+		 if @os_brand.save
+		 else 
+		 	flash[:notice] = "invalid brand name"
+		 	render 'index'
+            return
+		 end
+          @os_product=OsProduct.new(os_product_params)
+		 if @os_product.save
+		 	flash[:notice] = "product added successfully created"
+		 	render 'index'
+		 else
+		 	 lash[:notice] = "Invalid product details"
+             render 'index'
+          end
+   end
    private
 
     def os_category_params
