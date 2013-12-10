@@ -21,3 +21,8 @@ module Onlineshopping
     # config.i18n.default_locale = :de
   end
 end
+
+
+config.to_prepare do
+
+end
