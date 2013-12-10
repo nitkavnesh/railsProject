@@ -36,20 +36,43 @@
 
     <div class="container">
       <div id="products_show">
+        <br/><br/><br/>
         <button class="btn btn-success" id="addproduct">Add new product</button><br/><br/>
         <div id="selections">
-        <div id="input_form_for_category">
-        <select id="category" style="width: 220px; height: 35px;"  >
-            <option value="selected">select Category-</option>             
-            <option value="mobile">Mobile</option>
-            <option value="laptop">Laptop</option>
-        </select>      
-      </div>
-      <br/>
-      <p> Enter brand  <input type="text" id="brand"></input> </p></br>
-       <p> Enter price <input type="text" id="price"></input> </p></br>
-        <input type="submit"></input> 
-      </div>
+        <%= form_for :admins do |f| %>
+             <p>
+             <%= f.label :category %><br>
+             <%= f.text_field :cat_name %>
+            </p>
+             <p>
+             <%= f.label :brand %><br>
+             <%= f.text_field :br_name %>
+            </p>
+             <p>
+            <%= f.label :product_name %><br>
+            <%= f.text_field :pro_name %>
+            </p>
+             <p>
+            <%= f.label :product_price%><br>
+            <%= f.text_field :pro_price %>
+            </p>
+            <p>
+            <%= f.label :Product_feautures%><br>
+            <%= f.text_area :pro_feature%>
+            </p>
+             <p>
+            <%= f.label :Number_of_Products_Available%><br>
+            <%= f.text_field :pro_avilability %>
+            </p>
+             <p>
+            <%= f.label :location_of_image%><br>
+            <%= f.text_field :pro_image %>
+            </p>
+          <p>
+            <%= f.submit %>
+             </p>
+        <% end %>
+     </div>
        <div class="row">
           <div class="col-md-2">Product Id</div>
           <div class="col-md-3">Product Name</div>
@@ -58,6 +81,7 @@
          </div>
       </div>
       <div id="customers_show">
+        <br/><br/><br/>
         <div class="col-md-2">Customer Id</div>
           <div class="col-md-3">Customer Name</div>
           <div class="col-md-2">customer Email Id</div>
@@ -65,6 +89,7 @@
           <div class="col-md-1">Number of Product purchsed</div>
       </div>
       <div id="orders_show">
+           <br/><br/><br/>
           <div class="col-md-2">Order No.</div>
           <div class="col-md-2">Customer Id</div>
           <div class="col-md-2">Customer Name</div>
