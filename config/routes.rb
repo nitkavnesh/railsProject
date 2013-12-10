@@ -9,13 +9,14 @@ Onlineshopping::Application.routes.draw do
   get "os_products/index"
   get "os_brands/index"
   get "os_categories/index"
-  get "welcome/index"
+   root 'welcome#index'
+  #get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   resources :admins
-   root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
