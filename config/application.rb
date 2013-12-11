@@ -22,7 +22,3 @@ module Onlineshopping
   end
 end
 
-
-config.to_prepare do
-
-end
