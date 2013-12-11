@@ -8,6 +8,9 @@ Onlineshopping::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :admins
+  resources :products
+  resources :brands
+  resources :categories
   
   
 
