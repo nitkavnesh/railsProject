@@ -13,32 +13,73 @@
 
 ActiveRecord::Schema.define(version: 20131209064710) do
 
-  create_table "os_addresses", force: true do |t|
-    t.text     "add_address"
-    t.integer  "add_pincode"
-    t.text     "add_landmark"
-    t.string   "add_city"
-    t.string   "add_state"
-    t.string   "os_country"
-    t.integer  "os_customer_id"
+  create_table "addresses", force: true do |t|
+    t.text     "address"
+    t.integer  "pincode"
+    t.text     "landmark"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "os_brands", force: true do |t|
-    t.string   "br_name"
-    t.integer  "os_category_id"
+  create_table "brands", force: true do |t|
+    t.string   "name"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "os_categories", force: true do |t|
-    t.string   "cat_name"
+  create_table "categories", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "os_customers", force: true do |t|
+  create_table "order_products", force: true do |t|
+    t.integer  "quantity"
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: true do |t|
+    t.date     "date"
+    t.boolean  "status"
+    t.integer  "user_id"
+    t.integer  "shipment_detail_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.decimal  "price",        precision: 10, scale: 0
+    t.text     "feature"
+    t.integer  "availability"
+    t.string   "image"
+    t.integer  "brand_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shipment_details", force: true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.integer  "pincode"
+    t.text     "landmark"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "phone"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -55,53 +96,12 @@ ActiveRecord::Schema.define(version: 20131209064710) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cust_name"
-    t.integer  "cust_phone_no"
-    t.string   "cust_type"
+    t.string   "name"
+    t.integer  "phone_no"
+    t.string   "type"
   end
 
-  add_index "os_customers", ["email"], name: "index_os_customers_on_email", unique: true, using: :btree
-  add_index "os_customers", ["reset_password_token"], name: "index_os_customers_on_reset_password_token", unique: true, using: :btree
-
-  create_table "os_order_products", force: true do |t|
-    t.integer  "op_quantity"
-    t.integer  "os_product_id"
-    t.integer  "os_order_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "os_orders", force: true do |t|
-    t.date     "ord_date"
-    t.boolean  "ord_status"
-    t.integer  "os_customer_id"
-    t.integer  "os_shipment_detail_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "os_products", force: true do |t|
-    t.string   "pro_name"
-    t.decimal  "pro_price",        precision: 10, scale: 0
-    t.text     "pro_feature"
-    t.integer  "pro_availability"
-    t.string   "pro_image"
-    t.integer  "os_brand_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "os_shipment_details", force: true do |t|
-    t.string   "shi_name"
-    t.text     "shi_address"
-    t.integer  "shi_pincode"
-    t.text     "shi_landmark"
-    t.string   "shi_city"
-    t.string   "shi_state"
-    t.integer  "shi_phone"
-    t.string   "shi_country"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

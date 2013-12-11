@@ -5,21 +5,21 @@ class AdminsController < ApplicationController
 	end
 	def create
 		
-		@os_category = OsCategory.new(os_category_params)
-		if @os_category.save
+		@category = Category.new(category_params)
+		if @category.save
 		else 
 		 	flash[:notice] = "invalid category name"
             render 'index'
 		 end
-		 @os_brand=OsBrand.new(os_brand_params)
-		 if @os_brand.save
+		 @brand=Brand.new(brand_params)
+		 if @brand.save
 		 else 
 		 	flash[:notice] = "invalid brand name"
 		 	render 'index'
             return
 		 end
-          @os_product=OsProduct.new(os_product_params)
-		 if @os_product.save
+          @product=Product.new(product_params)
+		 if @product.save
 		 	flash[:notice] = "product added successfully created"
 		 	render 'index'
 		 else
@@ -29,15 +29,15 @@ class AdminsController < ApplicationController
    end
    private
 
-    def os_category_params
+    def category_params
        params.require(:admins).permit(:cat_name);
     end
 
-     def os_brand_params
+     def brand_params
        params.require(:admins).permit(:br_name);
     end
 
-     def os_product_params
+     def product_params
        params.require(:admins).permit(:pro_name,:pro_price,:pro_feature,:pro_availability,:pro_image);
     end
 

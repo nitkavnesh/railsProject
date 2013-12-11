@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
 protected
 
 def after_update_path_for(resource)
-  session[:domain_prefix] = current_os_customer.domain_prefix
-  session[:account_type] = current_os_customer.account_type
-  os_customer_path(resource)
+  session[:domain_prefix] = current_user.domain_prefix
+  session[:account_type] = current_user.account_type
+  user_path(resource)
 end
 
 

@@ -1,7 +1,7 @@
  $(document).ready(function()
  { 
  		$("#products_show").show();
- 		$("#customers_show").hide();
+ 		$("#users_show").hide();
  		$("#orders_show").hide();
  		$("#selections").hide();
  		var remove;
@@ -16,16 +16,16 @@
           $(this).addClass('active');
            id = this.value;
        		$("#products_show").show();
-       		$("#customers_show").hide();
+       		$("#users_show").hide();
  		    $("#orders_show").hide();
         }); 
-       $("#customers").click(function(){
+       $("#users").click(function(){
        $(remove).removeClass('active');
                     remove = this;
                     $(this).addClass('active');
                     id = this.value;
        	$("#products_show").hide();
- 		$("#customers_show").show();
+ 		$("#users_show").show();
  		$("#orders_show").hide();
        		
     	}); 
@@ -35,7 +35,7 @@
                     $(this).addClass('active');
                     id = this.value;
           $("#products_show").hide();
- 		$("#customers_show").hide();
+ 		$("#users_show").hide();
  		$("#orders_show").show();
        		
     	}); 

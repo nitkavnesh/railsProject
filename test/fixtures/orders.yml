@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ord_date: 2013-12-06
+
+two:
+  ord_date: 2013-12-06

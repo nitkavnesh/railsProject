@@ -1,14 +1,6 @@
 Onlineshopping::Application.routes.draw do
-  devise_for :os_customers, :controllers => { registrations: 'os_customers/registrations'}
-  #devise_for :os_customers
-  get "os_shipment_details/index"
-  get "os_order_products/index"
-  get "os_orders/index"
-  get "os_addresses/index"
-  get "os_customers/index"
-  get "os_products/index"
-  get "os_brands/index"
-  get "os_categories/index"
+  devise_for :users, :controllers => { registrations: 'users/registrations'}
+  
    root 'welcome#index'
   #get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,6 +8,7 @@ Onlineshopping::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :admins
+  
   
 
   # Example of regular route:
