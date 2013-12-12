@@ -1,0 +1,36 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+ .ulBullet
+{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+.caroslHeight{
+	height: 132px;
+}
+
+.fltLeft{float: left;}
+
+.imageSize{ 
+	height: 100px;
+	vertical-align: bottom;
+}
+
+.labelSize{
+	color: #666666;
+	line-height: 13 px;
+	padding: 6px 0 8px;
+}
+
+ol{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
