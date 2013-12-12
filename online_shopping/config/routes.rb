@@ -1,4 +1,5 @@
 OnlineShopping::Application.routes.draw do
+   devise_for :users
   root 'homes#index'
   #get "homes/index"
   # The priority is based upon order of creation: first created -> highest priority.
