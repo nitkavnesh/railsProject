@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :feature
       t.integer :availability
       t.string :image
-	    t.belongs_to :brand
+	    t.belongs_to :brands
       t.timestamps
     end
   end

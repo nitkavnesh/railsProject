@@ -1,2 +1,30 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<br/><br/>
+<br/>
+
+<%= form_for :product do |f| %>
+<%= f.label :category %><br/>
+<%= f.text_field :name %>
+<br/>
+<%= f.label :brand %><br/>
+<%= f.text_field :brand_name %>
+<br/>
+<%= f.label :product_name %><br/>
+<%= f.text_field :product_name %>
+<br/>
+<%= f.label :product_name %><br/>
+<%= f.text_field :product_name %>
+<br/>
+<%= f.label :product_price %><br/>
+<%= f.text_field :product_price %>
+<br/>
+<%= f.label :product_feauture%><br/>
+<%= f.text_field :product_feature %>
+<br/>
+<%= f.label :No_of_product_Available%><br/>
+<%= f.text_field :product_availability%>
+<br/>
+<%= f.label :No_of_product_Available%><br/>
+<%= f.text_field :product_availability%>
+<br/>
+<%= f.submit %>
+<% end %>

@@ -1,35 +1,53 @@
 class CategoriesController < ApplicationController
   def index
+     @categories=Category.all
   end
-  #save the data in category table
+  def new
+    Category.new
+  end
+  def show 
+     
+  end
+ 
   def create
   	@category=Category.new(get_category_parameter);
-  	p "************************************************************************************"
-  	test=Category.where( get_category_parameter ).first
-  	if(test==nil)
-  	   if @category.save
-          flash[:message]=" Category succefully saved"
-          render 'index'
-          return;
-        else 
-     	  flash[:message]="category not saved"
-     	  render 'index'
-     	  return
-        end
-    else 
-   	  flash[:message]="category already exist"
-   	  render 'index'
-      return
+  	respond_to do |format|
+      if @category.save
+        format.html { redirect_to @user, notice: 'category was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @category
+         }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
+      end
     end
-  end 
+  end
+   def update
+    respond_to do |format|
+      if @category.update(get_category_parameter)
+        format.html { redirect_to @category, notice: 'User was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
   private 
   def get_category_parameter 
    params.require(:category).permit(:name);
-  end
-  def update
-
-  end
-  def delete
-
   end
 end
