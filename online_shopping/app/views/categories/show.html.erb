@@ -1,0 +1,21 @@
+<div class="container" style="margin-top: 75px;">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<p id="notice"><%= notice %></p>
+			<p>
+			  <strong>Name:</strong>
+			  <%= @category.name %>
+			</p>
+
+			<p>
+			  <strong>Parent Category:</strong>
+			  <%=   get_parent_name(@category.parent_id) %>
+			</p>
+
+			<%= link_to 'Edit', edit_category_path(@category) %> |
+			<%= link_to 'Back', categories_path %>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>

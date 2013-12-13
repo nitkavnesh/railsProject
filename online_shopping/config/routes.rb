@@ -1,4 +1,5 @@
 OnlineShopping::Application.routes.draw do
+  get "categories/index"
    devise_for :users
   root 'homes#index'
   #get "homes/index"
@@ -16,7 +17,7 @@ OnlineShopping::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  resources :categories
   # Example resource route with options:
   #   resources :products do
   #     member do
