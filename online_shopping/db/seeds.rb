@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-electronics =  Category.create!(:name => 'electronics')
+User.create!(:name => 'avnesh', :phone_no => '7204467210', :email => 'avnesh@neevtech.com', :encrypted_password => 'avnesh123', :sign_in_count => 4)
