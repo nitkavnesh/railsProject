@@ -13,6 +13,7 @@ class Users::RegistrationsController < DeviseController
     params[:user][:password]=Devise.friendly_token.first(8)
     params[:user][:password_confirmation]=params[:user][:password]
      params[:user][:name]=params[:user][:name]
+     params[:user][:role_id]=2
     build_resource(sign_up_params)
 
 
