@@ -25,6 +25,14 @@
 
 	<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
+					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
+					<%= link_to "Change pass", edit_user_registration_path %>
+				</li>		
+
+				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
+					<%= link_to "Welcome #{current_user.name}"  %>
+				</li>		
+
 				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 					<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
 				</li>				
@@ -35,7 +43,8 @@
 					</li>
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 					<%= link_to "sign in", new_user_session_path  %>
-				</li>		
+				</li>	
+					
 
 					 <% end %>
 

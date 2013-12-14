@@ -1,5 +1,11 @@
 OnlineShopping::Application.routes.draw do
 
+  get "bills/index"
+  get "bills/new"
+  get "bills/create"
+  get "bills/show" 
+  resources :bills
+
   devise_for :users, :controllers => { registrations: 'users/registrations'  }    
   get "addresses/index"
   get "roles/index"

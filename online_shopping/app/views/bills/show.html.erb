@@ -1,0 +1,54 @@
+<br><br>
+<h1><u>Bill Detail:</u></h1>
+<h4>Bill Id: <%= @bill.id %></h4>
+<h4>User_name : <% if @bill.user %>
+        					<%= @bill.user.name %></td>
+        				<% else %>
+        	       Nill 
+                <% end -%>
+ </h4>
+ <h4>Total Bill: <%= @bill.total_amount %></h4>
+
+<hr>
+ <% if BillDetail.where(bill_id: @bill.id) %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bill_detail id</th>
+      <th>&nbsp&nbsp Product Name</th>
+      <th>&nbsp&nbsp Unique Number</th>
+      <th>&nbsp&nbsp Description</th>
+       <th>&nbsp&nbsp price</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+ 
+	<%  BillDetail.where(bill_id: @bill.id).each do |billdetailarray| %>
+			
+		<% @product_detail = ProductDetail.find(billdetailarray.product_detail_id) %>
+		<% @product = Product.find(@product_detail.product_id) %>
+	<tr>
+		<td>&nbsp&nbsp<%= @product_detail.id %></td>
+		<td>&nbsp&nbsp<%= @product.name %></td>
+		<td>&nbsp&nbsp<%= @product_detail.unique_id %></td>
+		<td>&nbsp&nbsp<%= @product.description %></td>
+		<td>&nbsp&nbsp<%= @product.price %></td>
+		
+	</tr>
+	<% end -%>
+  </tbody>
+</table>
+<% else %>
+No detail Available
+
+<% end -%>
+
+<br>
+<h4>
+
+<br>
+<%= link_to 'Back', bills_path %>
+
+</h4>

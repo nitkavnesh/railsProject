@@ -1,0 +1,36 @@
+<br><br>
+<h1><u>Listing bills</u></h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Bill id</th>
+      <th>&nbsp&nbsp User Name</th>
+      <th>&nbsp&nbsp Date</th>
+      <th>&nbsp&nbsp Total Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.id %></td>        
+        <% if bill.user %>
+        <td>&nbsp&nbsp <%= bill.user.name %></td>
+        <% else %>
+        <td>&nbsp&nbsp Nill </td>
+        <% end -%>
+        <td>&nbsp&nbsp <%= bill.date %></td>
+        <td>&nbsp&nbsp&nbsp <%= bill.total_amount %></td>
+        <td>&nbsp&nbsp&nbsp&nbsp <%= link_to 'Show', bill_path(bill) %></td>
+       
+        <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h4>
+<%= link_to 'New bill', new_bill_path %>
+</h4>
