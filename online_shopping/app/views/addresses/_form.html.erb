@@ -1,14 +1,20 @@
 <%= form_for @address  do |f| %>
-<%= f.label :Address %>
+<%= f.label :User %>
 <div class="controls mrg_top">
-	<%= f.collection_select :id, User.all, :id, :name, :prompt => "Select Category" %>
+	<%= f.collection_select :user_id, User.all, :id, :name, :prompt => "Select Address" %>
 	</select>
 </div>
+<%= f.label :Address %>
 <%= f.text_field :address,  :class=> "form-control"%>
+<%= f.label :landmark %>
 <%= f.text_field :landmark,  :class=> "form-control"%>
+<%= f.label :pincode %>
 <%= f.text_field :pincode,  :class=> "form-control"%>
+<%= f.label :city %>
 <%= f.text_field :city,  :class=> "form-control"%>
+<%= f.label :state %>
 <%= f.text_field :state,  :class=> "form-control"%>
+<%= f.label :country %>
 <%= f.text_field :country,  :class=> "form-control"%>
 <%= f.submit :class=>"btn btn-primary mrg_top" %>
 <% end %>
