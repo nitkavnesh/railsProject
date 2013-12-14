@@ -26,6 +26,16 @@ class AddressesController < ApplicationController
   	redirect_to addresses_path
   end
 
+  def update
+    @address = Address.find(params[:id])
+
+    if @address.update_attributes(get_address_parameter)
+      redirect_to addresses_path, :notice => "Address has successfully updated"
+    else
+      render 'edit'
+    end
+  end
+
   private 
   def get_address_parameter 
   	params.require(:address).permit(:user_id, :address, :landmark, :city, :state, :country, :pincode);

@@ -1,5 +1,6 @@
 OnlineShopping::Application.routes.draw do
 
+  get "products/index"
   devise_for :users, :controllers => { registrations: 'users/registrations'  }    
   get "addresses/index"
   get "roles/index"
@@ -24,6 +25,7 @@ OnlineShopping::Application.routes.draw do
   resources :categories
   resources :roles
   resources :addresses
+  resources :products
   # Example resource route with options:
   #   resources :products do
   #     member do

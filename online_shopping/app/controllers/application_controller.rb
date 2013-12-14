@@ -21,10 +21,4 @@ end
   user_path(resource)
 end
 
-
-
-
-
-
-
 end

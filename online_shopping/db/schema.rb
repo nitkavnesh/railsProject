@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212150510) do
+ActiveRecord::Schema.define(version: 20131214121436) do
 
   create_table "addresses", force: true do |t|
     t.text     "address"
@@ -61,11 +61,14 @@ ActiveRecord::Schema.define(version: 20131212150510) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.decimal  "price",                   precision: 10, scale: 0
-    t.string   "image",       limit: 256
+    t.decimal  "price",              precision: 10, scale: 0
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "products", ["name"], name: "index_products_on_name", unique: true, using: :btree
