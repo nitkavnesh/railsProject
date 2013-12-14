@@ -30,6 +30,8 @@ OnlineShopping::Application.routes.draw do
   resources :categories
   resources :roles
   resources :addresses
+  resources :products
+  resources :product_details
   # Example resource route with options:
   #   resources :products do
   #     member do

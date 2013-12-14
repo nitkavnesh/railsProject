@@ -26,6 +26,15 @@ class CategoriesController < ApplicationController
   	redirect_to categories_path
   end
 
+  def update
+    @category = Category.find(params[:id])
+
+    if @category.update_attributes(get_category_parameter)
+      redirect_to categories_path, :notice => "Category has successfully updated"
+    else
+      render 'edit'
+    end
+  end
 
   private 
   def get_category_parameter 

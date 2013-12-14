@@ -26,6 +26,17 @@ class RolesController < ApplicationController
   	redirect_to :roles
   end
 
+  def update
+    @role = Role.find(params[:id])
+
+    if @role.update_attributes(get_role_parameter)
+      redirect_to roles_path, :notice => "Role has successfully updated"
+    else
+      render 'edit'
+    end
+  end
+
+
   private 
   def get_role_parameter 
   	params.require(:role).permit(:name, :parent_id);

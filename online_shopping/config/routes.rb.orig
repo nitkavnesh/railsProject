@@ -1,5 +1,21 @@
 OnlineShopping::Application.routes.draw do
-  devise_for :users
+
+<<<<<<< HEAD
+  get "bills/index"
+  get "bills/new"
+  get "bills/create"
+  get "bills/show" 
+  resources :bills
+
+=======
+  get "product_details/index"
+  get "products/index"
+>>>>>>> 73a226b9c9d62013ce48a4081131e82b3933afad
+  devise_for :users, :controllers => { registrations: 'users/registrations'  }    
+  get "addresses/index"
+  get "roles/index"
+  get "categories/index"
+  # devise_for :users
   root 'homes#index'
   #get "homes/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,7 +32,11 @@ OnlineShopping::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  resources :categories
+  resources :roles
+  resources :addresses
+  resources :products
+  resources :product_details
   # Example resource route with options:
   #   resources :products do
   #     member do

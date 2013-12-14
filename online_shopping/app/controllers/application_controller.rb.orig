@@ -29,6 +29,7 @@ end
   user_path(resource)
 end
 
+<<<<<<< HEAD
 
 
 
@@ -37,4 +38,6 @@ end
 
 
 
+=======
+>>>>>>> 73a226b9c9d62013ce48a4081131e82b3933afad
 end
