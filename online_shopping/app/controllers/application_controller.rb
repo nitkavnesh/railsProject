@@ -19,7 +19,7 @@ def update_sanitized_params
 end	
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :name , :phone_no) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :name , :phone_no, :role_id) }
   end
 
 
