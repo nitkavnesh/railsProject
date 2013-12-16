@@ -14,8 +14,9 @@
 
 .fltLeft{float: left;}
 
-.imageSize{ 
-	height: 120px;
+.imageSize{
+    height: 150px;
+    width: 230px;
 	vertical-align: bottom;
 }
 
@@ -34,8 +35,3 @@ ol{
 .mrgTop{margin-top: 20px;}
 .mrgLeft{margin-left: 0px;}
 .minHigh{min-height: 120px;}
-
-.cls img {
-    width: 100%;
-    height: auto;
-}

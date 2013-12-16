@@ -44,70 +44,27 @@
 				</h2>
 			</div>
 
-
-			<div class="cls" style="background-color: #424242; height: 140px;">
-			  <ul class="carousel ulBullet">
-					<li class="carousel-item active" style="width: 146px; margin-left: 2px;">
-						<a class="fltLeft" href="#" data-tracking-id="">
-							<div class="fltLeft imageSize">
-								<img src="/assets/holiday-shopping.jpg">
-							</div>
-							<div class="fltLeft labelSize">
-								<span class="arrow-right">Mobiles</span>
-							</div>
-						</a>
-					</li>
-
-					<li class="carousel-item fltLeft" style="width: 146px; margin-left: 2px;">
-						<a class="fltLeft" href="#" data-tracking-id="">
-							<div class="fltLeft imageSize">
-								<img src="/assets/celebrations.jpg" class="minHigh">
-							</div>
-							<div class="fltLeft labelSize">
-								<span class="arrow-right">Mobiles</span>
-							</div>
-						</a>
-					</li>
-
-
-					<li class="carousel-item fltLeft" style="width: 146px; margin-left: 2px;">
-						<a class="fltLeft" href="#" data-tracking-id="">
-							<div class="fltLeft">
-								<img src="assets/category-landing1.jpg">
-							</div>
-							<div class="fltLeft labelSize">
-								<span class="arrow-right">Mobiles</span>
-							</div>
-						</a>
-					</li>
-
-					<!--          dfgdfgdfd    -->
-
-
-					<li class="carousel-item fltLeft" style="width: 146px; margin-left: 2px;">
-						<a class="fltLeft" href="#" data-tracking-id="">
-							<div class="fltLeft imageSize">
-								<img src="/assets/holiday-shopping.jpg">
-							</div>
-							<div class="fltLeft labelSize">
-								<span class="arrow-right">Mobiles</span>
-							</div>
-						</a>
-					</li>
-
-					<li class="carousel-item fltLeft" style="width: 146px; margin-left: 2px;">
-						<a class="fltLeft" href="#" data-tracking-id="">
-							<div class="fltLeft imageSize">
-								<img src="/assets/celebrations.jpg">
-							</div>
-							<div class="fltLeft labelSize">
-								<span class="arrow-right">Mobiles</span>
-							</div>
-						</a>
-					</li>
+			<div class="cls" style="background-color: #ffffff; height: 180px;">
+			  <ul class="ulBullet" style="margin-left:10px;">
+			  	<% @categories.each do |category| %>
+			  		<% if get_parent_name(category.parent_id) == "Electronics" %>
+							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
+								<a class="fltLeft" href="#" data-tracking-id="">
+									<div class="fltLeft">
+										<img class="imageSize" src="<%= category.image %>">
+									</div>
+									<div class=" labelSize" style="position:relative; top:10px; left:100px;">
+										<span class="arrow-right"><b><%= category.name %></b></span>
+									</div>
+								</a>
+							</li>
+						<% end %>
+					<% end %>
 
 				</ul>
 			</div>
+
+			
 
 
 
@@ -115,10 +72,33 @@
 
 			<div class="" style="background-color: #424242; height: 40px; margin-top: 20px;">
 				<h2 class="header" style="background-color: #424242; height: 38px;">
-					<span style="text-transform: uppercase; font-size: 16px; color: #ffffff; margin-left: 10px;">Books & Media</span>
-					<span style="font-size: 14px; color: #ffffff; margin-right: 10px; float: right; margin-top: 12px;">India's leading electronics megastore</span>
+					<span style="text-transform: uppercase; font-size: 16px; color: #ffffff; margin-left: 10px;">Books</span>
+					<span style="font-size: 14px; color: #ffffff; margin-right: 10px; float: right; margin-top: 12px;">India's leading books megastore</span>
 				</h2>
 			</div>
+
+
+			<div class="cls" style="background-color: #ffffff; height: 180px;">
+			  <ul class="ulBullet" style="margin-left:10px;">
+			  	<% @categories.each do |category| %>
+			  		<% if get_parent_name(category.parent_id) == "Books" %>
+							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
+								<a class="fltLeft" href="#" data-tracking-id="">
+									<div class="fltLeft">
+										<img class="imageSize" src="<%= category.image %>">
+									</div>
+									<div class=" labelSize" style="position:relative; top:10px; left:100px;">
+										<span class="arrow-right"><b><%= category.name %></b></span>
+									</div>
+								</a>
+							</li>
+						<% end %>
+					<% end %>
+
+				</ul>
+			</div>
+
+
 
 
 		
@@ -128,11 +108,29 @@
 			<div class="" style="background-color: #424242; height: 40px; margin-top: 20px;">
 				<h2 class="header" style="background-color: #424242; height: 38px;">
 					<span style="text-transform: uppercase; font-size: 16px; color: #ffffff; margin-left: 10px;">Fashion</span>
-					<span style="font-size: 14px; color: #ffffff; margin-right: 10px; float: right; margin-top: 12px;">India's leading electronics megastore</span>
+					<span style="font-size: 14px; color: #ffffff; margin-right: 10px; float: right; margin-top: 12px;">India's leading FAshion megastore</span>
 				</h2>
 			</div>
 
+			<div class="cls" style="background-color: #ffffff; height: 180px;">
+			  <ul class="ulBullet" style="margin-left:10px;">
+			  	<% @categories.each do |category| %>
+			  		<% if get_parent_name(category.parent_id) == "Fashion" %>
+							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
+								<a class="fltLeft" href="#" data-tracking-id="">
+									<div class="fltLeft">
+										<img class="imageSize" src="<%= category.image %>">
+									</div>
+									<div class=" labelSize" style="position:relative; top:10px; left:100px;">
+										<span class="arrow-right"><b><%= category.name %></b></span>
+									</div>
+								</a>
+							</li>
+						<% end %>
+					<% end %>
 
+				</ul>
+			</div>
 
 
 
