@@ -14,6 +14,7 @@
           <tr>
             <th>Category</th>
             <th>Parent Category</th>
+            <th>Image</th>
             <th></th>
             <th></th>
             <th></th>
@@ -25,6 +26,9 @@
             <tr>
               <td><%= category.name %></td>
               <td><%= get_parent_name(category.parent_id) %></td>
+              <% if category.image?%>
+                <td><%= category.image %></td>
+              <% end %>
               <td><%= link_to 'Show', category, :class=>"mrg_left" %></td>
               <td><%= link_to 'Edit', edit_category_path(category), :class=>"mrg_left" %></td>
               <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"mrg_left" %></td>

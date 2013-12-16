@@ -12,14 +12,10 @@
     margin:0;
 }
 
-.caroslHeight{
-	height: 132px;
-}
-
 .fltLeft{float: left;}
 
 .imageSize{ 
-	height: 100px;
+	height: 120px;
 	vertical-align: bottom;
 }
 
@@ -33,4 +29,13 @@ ol{
     list-style-type: none;
     padding:0;
     margin:0;
+}
+
+.mrgTop{margin-top: 20px;}
+.mrgLeft{margin-left: 0px;}
+.minHigh{min-height: 120px;}
+
+.cls img {
+    width: 100%;
+    height: auto;
 }

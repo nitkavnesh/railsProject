@@ -5,5 +5,7 @@
 	<%= f.collection_select :parent_id, Category.all, :id, :name, :prompt => "Select Category" %>
 	</select>
 </div>
+<%= f.label :image %>
+<%= f.file_field :image%>
 <%= f.submit :class=>"btn btn-primary mrg_top" %>
 <% end %>

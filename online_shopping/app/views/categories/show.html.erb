@@ -12,6 +12,10 @@
 			  <strong>Parent Category:</strong>
 			  <%= get_parent_name(@category.parent_id) %>
 			</p>
+			<p>
+			  <strong>Image:</strong>
+			  <%= @category.image %>
+			</p>
 
 			<%= link_to 'Edit', edit_category_path(@category) %> |
 			<%= link_to 'Back', categories_path %>
