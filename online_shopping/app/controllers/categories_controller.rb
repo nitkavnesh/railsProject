@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-  	@category = Category.find(params[:id])
+  	@diff_category = Category.where(:parent_id=>params[:id])
   end
 
   def create

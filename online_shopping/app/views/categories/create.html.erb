@@ -1,0 +1,5 @@
+<% if user_signed_in?  && current_user.role_id== 1 %>
+  <%= render 'categories/admin' %>
+  <% else %>
+  <%= render 'categories/user' %>
+<% end %>
