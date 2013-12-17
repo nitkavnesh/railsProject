@@ -37,8 +37,8 @@ config.action_mailer.default_url_options = { :host => "localhost:3000" }
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'localhost:3000',
-    user_name:            'rorappraisal',
-    password:             'neev_ror',
+    user_name:            'roronlineshopping',
+    password:             'freshersror',
     authentication:       'plain',
     enable_starttls_auto: true  }
 
