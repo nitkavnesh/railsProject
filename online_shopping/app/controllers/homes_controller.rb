@@ -14,13 +14,11 @@ class HomesController < ApplicationController
   	else
   		redirect_to bills_create_path
   	end
+  end
 
   def subcategory
   	category_id=Category.find_by_name(params[:id]).id
     @categories = Category.where(parent_id: category_id)
     @cat_name = params[:id]
   end
-
-
-
 end

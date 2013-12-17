@@ -7,8 +7,6 @@
 
 	<% end -%>
 	}
-
-
 </script>
 
 <div>
@@ -37,39 +35,27 @@
 
 
 	<ul class="nav navbar-nav navbar-right">
-
 				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<image src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
+					<image class="cur_pont" src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
 				</li>		
 
 				<% if user_signed_in? %>
-						
+					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
+						<%= link_to "Welcome #{current_user.name}"  %>
+					</li>		
 
-				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<image src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
-				</li>		
-
-				<% if user_signed_in? %>
-						
-
-				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
-					<%= link_to "Welcome #{current_user.name}"  %>
-				</li>		
-
-				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
-				</li>				
-				
-				<% else %>
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<%= link_to "signup", new_user_registration_path %>
-					</li>
-					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<%= link_to "sign in", new_user_session_path  %>
-				</li>	
+						<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
+					</li>				
 					
-
-					 <% end %>
+					<% else %>
+						<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+						<%= link_to "signup", new_user_registration_path %>
+						</li>
+						<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+						<%= link_to "sign in", new_user_session_path  %>
+					</li>	
+				<% end %>
 
 <% if user_signed_in?  && current_user.role_id== 1 %>
 		<div style="background-color: #0A3151;">
