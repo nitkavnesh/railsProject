@@ -1,10 +1,26 @@
 OnlineShopping::Application.routes.draw do
 
+  get "carts/index"
+  get "carts/new"
+  get "carts/create"
+  get "carts/edit"
+  get "carts/update"
+  get "carts/show"
   get "bills/index"
   get "bills/new"
   get "bills/create"
   get "bills/show" 
+
   resources :bills
+get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
+ get '/homes/generate_bill', :controller => 'homes', :action => 'generate_bill'
+  resources :homes
+
+  resources :carts do 
+    collection do
+      get :index
+    end
+  end
 
   devise_for :users, :controllers => { registrations: 'users/registrations'  }    
   get "addresses/index"

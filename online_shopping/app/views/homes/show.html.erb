@@ -1,0 +1,14 @@
+<script type="text/javascript">
+	function showCart()
+	{
+	<% (session[:temporary_shopping_cart] ||= []) << @product.id %>
+	$("#cart").click();
+}
+</script>
+
+<br><br><br><br><br>
+
+
+<%= @product.name %>
+<br>
+<button onclick="showCart()" >"Add Product To Cart"</button>
