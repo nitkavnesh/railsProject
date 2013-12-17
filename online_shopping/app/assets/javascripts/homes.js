@@ -1,4 +1,1 @@
-$("#mobiles").onclick
-{
-	
-}
+$('.carousel').carousel()

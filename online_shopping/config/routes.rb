@@ -10,6 +10,7 @@ OnlineShopping::Application.routes.draw do
   get "addresses/index"
   get "roles/index"
   get "categories/index"
+
   # devise_for :users
   root 'homes#index'
   #get "homes/index"
@@ -20,18 +21,22 @@ OnlineShopping::Application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  #get 'products/:id', to: 'products#show', as: 'product'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :categories
+  resources :categories, :path => '/'
   resources :roles
   resources :addresses
-  resources :products
+  resources :products,
   resources :product_details
+
+  #match "products/:name", to: 'products#show', as: :name, via: [:get]
+
+
   # Example resource route with options:
   #   resources :products do
   #     member do

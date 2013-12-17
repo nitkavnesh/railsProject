@@ -38,6 +38,6 @@ class CategoriesController < ApplicationController
 
   private 
   def get_category_parameter 
-  	params.require(:category).permit(:name, :parent_id);
+  	params.require(:category).permit(:name, :parent_id, :image);
   end
 end

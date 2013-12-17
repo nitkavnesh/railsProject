@@ -8,7 +8,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-  	@product = Product.find(params[:id])
+    category_id=Category.find_by_name(params[:id]).id
+    @products = Product.where(category_id: category_id)
   end
 
   def create

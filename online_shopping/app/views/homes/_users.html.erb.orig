@@ -44,12 +44,97 @@
 				</h2>
 			</div>
 
+<<<<<<< HEAD
+
+			<div>
+				<div id="carousel-example-generic" class="carousel slide caroslHeight" data-ride="carousel">
+				  <!-- Indicators -->
+				  <!--<ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>  -->
+
+				  <!-- Wrapper for slides -->
+					  <div class="carousel-wrapper" style="width: 1606px;">
+						  	<ul class="carousel ulBullet">
+								<li class="carousel-item" style="width: 100px; margin-left: 2px;">
+									<a class="fltLeft" href="/categories/1" data-tracking-id="" >
+										<div class="fltLeft imageSize" id="mobiles">
+											<img src="/assets/mobiles.png" style="width:100px;height:130px">
+										</div>
+										<div class="fltLeft labelSize">
+											<span class="arrow-right">Mobiles</span>
+										</div>
+									</a>
+								</li>
+
+								<li class="carousel-item fltLeft" style="width: 100px; margin-left: 2px;">
+									<a class="fltLeft" href="/categories/1" data-tracking-id="">
+										<div class="fltLeft imageSize">
+											<img src="/assets/games.jpeg" style="height:130px;width:100px">
+										</div>
+										<div class="fltLeft labelSize">
+											<span class="arrow-right">Games</span>
+										</div>
+									</a>
+								</li>
+
+
+								<li class="carousel-item fltLeft" style="width: 100px; margin-left: 2px;">
+									<a class="fltLeft" href="#" data-tracking-id="">
+										<div class="fltLeft imageSize">
+											<img src="assets/books.jpg" style="height:130px;width:100px;">
+										</div>
+										<div class="fltLeft labelSize">
+											<span class="arrow-right">Books</span>
+										</div>
+									</a>
+								</li>
+
+								<!--          dfgdfgdfd    -->
+
+
+								<li class="carousel-item fltLeft" style="width: 146px; margin-left: 2px;">
+									<a class="fltLeft" href="#" data-tracking-id="">
+										<div class="fltLeft imageSize">
+											<img src="/assets/holiday-shopping.jpg">
+										</div>
+										<div class="fltLeft labelSize">
+											<span class="arrow-right">Mobiles</span>
+										</div>
+									</a>
+								</li>
+
+								<li class="carousel-item fltLeft" style="width: 146px; margin-left: 2px;">
+									<a class="fltLeft" href="#" data-tracking-id="">
+										<div class="fltLeft imageSize">
+											<img src="/assets/celebrations.jpg">
+										</div>
+										<div class="fltLeft labelSize">
+											<span class="arrow-right">Mobiles</span>
+										</div>
+									</a>
+								</li>
+
+							</ul>
+
+					  	  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left"></span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right"></span>
+						  </a>
+					</div>
+				</div>
+=======
 			<div class="cls" style="background-color: #ffffff; height: 180px;">
-			  <ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
+			  <ul class="ulBullet" style="margin-left:10px;">
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Electronics" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
-								<a class="fltLeft" href="<%= category.name %>" data-tracking-id="">
+								<a class="fltLeft" href="#" data-tracking-id="">
 									<div class="fltLeft">
 										<img class="imageSize" src="<%= category.image %>">
 									</div>
@@ -62,6 +147,7 @@
 					<% end %>
 
 				</ul>
+>>>>>>> c1bde8f863a25a389da240f8dcdcb9763b0e26a4
 			</div>
 
 			
@@ -79,7 +165,7 @@
 
 
 			<div class="cls" style="background-color: #ffffff; height: 180px;">
-			  <ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
+			  <ul class="ulBullet" style="margin-left:10px;">
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Books" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
@@ -113,7 +199,7 @@
 			</div>
 
 			<div class="cls" style="background-color: #ffffff; height: 180px;">
-			  <ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
+			  <ul class="ulBullet" style="margin-left:10px;">
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Fashion" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
