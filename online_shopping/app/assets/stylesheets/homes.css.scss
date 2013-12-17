@@ -35,3 +35,46 @@ ol{
 .mrgTop{margin-top: 20px;}
 .mrgLeft{margin-left: 0px;}
 .minHigh{min-height: 120px;}
+
+hr.sub { 
+    color: #848484; background: #848484; width: 99%; height: 2px; 
+}
+
+.first-section {
+    border: 0 none;
+    padding-top: 0;
+}
+
+.nav-section {
+    border-top: 1px solid #CCCCCC;
+    margin-bottom: 13px;
+    padding: 13px 7px 0 3px;
+}
+
+.nav-section-title {
+    color: #848484;
+    padding: 0 0 2px 4px;
+}
+.nav-section-cat-list{
+    overflow: hidden;
+}
+.nav-section-item{
+    padding: 4px 0 4px 4px;
+}
+
+.tpadding5 {
+    padding-top: 5px;
+}
+
+.tpadding5 {
+    padding-bottom: 5px;
+}
+
+a.cont {
+    color: #666666;
+    cursor: pointer;
+    text-decoration: none;
+}
+.hov_col:hover{
+    background-color: #666;
+}

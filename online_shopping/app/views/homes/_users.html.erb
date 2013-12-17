@@ -45,11 +45,11 @@
 			</div>
 
 			<div class="cls" style="background-color: #ffffff; height: 180px;">
-			  <ul class="ulBullet" style="margin-left:10px;">
+			  <ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Electronics" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
-								<a class="fltLeft" href="#" data-tracking-id="">
+								<a class="fltLeft" href="subcategory/<%= category.name %>" data-tracking-id="">
 									<div class="fltLeft">
 										<img class="imageSize" src="<%= category.image %>">
 									</div>
@@ -79,7 +79,7 @@
 
 
 			<div class="cls" style="background-color: #ffffff; height: 180px;">
-			  <ul class="ulBullet" style="margin-left:10px;">
+			  <ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Books" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
@@ -113,7 +113,7 @@
 			</div>
 
 			<div class="cls" style="background-color: #ffffff; height: 180px;">
-			  <ul class="ulBullet" style="margin-left:10px;">
+			  <ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Fashion" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">

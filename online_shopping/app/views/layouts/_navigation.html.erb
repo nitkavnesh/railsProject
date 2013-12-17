@@ -66,62 +66,42 @@
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">ELECTRONICS<b class="caret"></b></a>
-	                  <ul class="dropdown-menu">
-	                    <li><a href="#">Mobiles</a>
-	                    	<ul class="ulBullet">
-			                    <li><a href="#" style="transition: right 100ms;">Mobiles</a></li>
-			                    <li><a href="#">Laptops</a></li>
-			                    <li><a href="#">Cameras</a></li>
-		                	</ul>
-	                    </li>
-	                    <li><a href="#">Laptops</a></li>
-	                    <li><a href="#">Cameras</a></li>
-	                    <li class="divider"></li>
-	                    <li class="dropdown-header">Nav header</li>
-	                    <li><a href="#">Separated link</a></li>
-	                    <li><a href="#">One more separated link</a></li>
-	                  </ul>
-	                </li>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">ELECTRONICS<b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	          	<% (Category.all).each do |category| %>
+								<% if get_parent_name(category.parent_id) == "Electronics" %>
+	                <li><a href="#"><%= category.name %></a></li>
+	                <ul class="dropdown-menu">
+							      <li><a href="#">Dropdown link</a></li>
+							      <li><a href="#">Dropdown link</a></li>
+							    </ul>
+	              <% end %>
+	            <% end %>
+	          </ul>
+	        </li>
 
 					<li class="dropdown">
-	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">BOOKS & MEDIA<b class="caret"></b></a>
-	                  <ul class="dropdown-menu">
-	                    <li><a href="#">Action</a></li>
-	                    <li><a href="#">Another action</a></li>
-	                    <li><a href="#">Something else here</a></li>
-	                    <li class="divider"></li>
-	                    <li class="dropdown-header">Nav header</li>
-	                    <li><a href="#">Separated link</a></li>
-	                    <li><a href="#">One more separated link</a></li>
-	                  </ul>
-	                </li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">BOOKS<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            	<% (Category.all).each do |category| %>
+								<% if get_parent_name(category.parent_id) == "Books" %>
+              		<li><a href="#"><%= category.name %></a></li>
+              	<% end %>
+              <% end %>
+            </ul>
+          </li>
 
 					<li class="dropdown">
-	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">MEN<b class="caret"></b></a>
-	                  <ul class="dropdown-menu">
-	                    <li><a href="#">Action</a></li>
-	                    <li><a href="#">Another action</a></li>
-	                    <li><a href="#">Something else here</a></li>
-	                    <li class="divider"></li>
-	                    <li class="dropdown-header">Nav header</li>
-	                    <li><a href="#">Separated link</a></li>
-	                    <li><a href="#">One more separated link</a></li>
-	                  </ul>
-	                </li>
-
-					<li class="dropdown">
-	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">WOMEN<b class="caret"></b></a>
-	                  <ul class="dropdown-menu">
-	                    <li><a href="#">Action</a></li>
-	                    <li><a href="#">Another action</a></li>
-	                    <li><a href="#">Something else here</a></li>
-	                    <li class="divider"></li>
-	                    <li class="dropdown-header">Nav header</li>
-	                    <li><a href="#">Separated link</a></li>
-	                    <li><a href="#">One more separated link</a></li>
-	                  </ul>
-	                </li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">FASHION<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            	<% (Category.all).each do |category| %>
+			  				<% if get_parent_name(category.parent_id) == "Fashion" %>
+              		<li><a href="#"><%= category.name %></a></li>
+              	<% end %>
+              <% end %>
+            </ul>
+          </li>
+					
 				</ul>
 			</div>
 		</div>
