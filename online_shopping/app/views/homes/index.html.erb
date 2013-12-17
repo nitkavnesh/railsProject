@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container" style="margin-top: 70px;">
 	<div class="row">
 		<div class="col-md-8" style="margin-top: 13px;">
@@ -335,3 +336,10 @@
 			</div>
 	</div>
 </div>
+=======
+<% if user_signed_in?  && current_user.role_id== 1 %>
+	<%= render 'homes/admin' %>
+<% else %>
+	<%= render 'homes/users' %>
+<% end %>
+>>>>>>> e3571e9a188b234f27884f4a474dd144102fdf0d

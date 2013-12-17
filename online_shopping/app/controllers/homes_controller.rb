@@ -1,6 +1,7 @@
 class HomesController < ApplicationController
 
-  def index  	
+  def index
+  	@categories = Category.all
   end
 
   def show
@@ -14,6 +15,10 @@ class HomesController < ApplicationController
   		redirect_to bills_create_path
   	end
 
+  def subcategory
+  	category_id=Category.find_by_name(params[:id]).id
+    @categories = Category.where(parent_id: category_id)
+    @cat_name = params[:id]
   end
 
 

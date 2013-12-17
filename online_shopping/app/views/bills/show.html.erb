@@ -16,10 +16,10 @@
   <thead>
     <tr>
       <th>Bill_detail id</th>
-      <th>&nbsp&nbsp Product Name</th>
-      <th>&nbsp&nbsp Unique Number</th>
-      <th>&nbsp&nbsp Description</th>
-       <th>&nbsp&nbsp price</th>
+      <th>Product Name</th>
+      <th>Unique Number</th>
+      <th>Description</th>
+       <th>price</th>
      
     </tr>
   </thead>
@@ -30,11 +30,11 @@
 		<% @product_detail = ProductDetail.find(billdetailarray.product_detail_id) %>
 		<% @product = Product.find(@product_detail.product_id) %>
 	<tr>
-		<td>&nbsp&nbsp<%= @product_detail.id %></td>
-		<td>&nbsp&nbsp<%= @product.name %></td>
-		<td>&nbsp&nbsp<%= @product_detail.unique_id %></td>
-		<td>&nbsp&nbsp<%= @product.description %></td>
-		<td>&nbsp&nbsp<%= @product.price %></td>
+		<td><%= @product_detail.id %></td>
+		<td><%= @product.name %></td>
+		<td><%= @product_detail.unique_id %></td>
+		<td><%= @product.description %></td>
+		<td><%= @product.price %></td>
 		
 	</tr>
 	<% end -%>
