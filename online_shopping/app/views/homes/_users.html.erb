@@ -49,7 +49,7 @@
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Electronics" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
-								<a class="fltLeft" href="subcategory/<%= category.name %>" data-tracking-id="">
+								<a class="fltLeft cat-nov-col" href="subcategory/<%= category.name %>" >
 									<div class="fltLeft">
 										<img class="imageSize" src="<%= category.image %>">
 									</div>
@@ -83,7 +83,7 @@
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Books" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
-								<a class="fltLeft" href="#" data-tracking-id="">
+								<a class="fltLeft" href="subcategory/<%= category.name %>">
 									<div class="fltLeft">
 										<img class="imageSize" src="<%= category.image %>">
 									</div>
@@ -117,7 +117,7 @@
 			  	<% @categories.each do |category| %>
 			  		<% if get_parent_name(category.parent_id) == "Fashion" %>
 							<li class="fltLeft" style="width: 240px; height: 138px; margin-left: 2px;">
-								<a class="fltLeft" href="#" data-tracking-id="">
+								<a class="fltLeft" href="subcategory/<%= category.name %>">
 									<div class="fltLeft">
 										<img class="imageSize" src="<%= category.image %>">
 									</div>
