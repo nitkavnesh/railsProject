@@ -22,13 +22,13 @@
 				<% total_amount += @product.price * quantity %>
 				
 				<div class="row">
-				<div class="col-md-2"><%= @product.id  %></div>				
+				<div class="col-md-2 "><img class="image-size" src="<%= @product.image  %>" ></div>				
 				<div class="col-md-2"><%= @product.name  %></div>
 				<div class="col-md-1"><%= quantity  %></div>				
 				<div class="col-md-1"><%= @product.price  %></div>
 				<div class="col-md-1"><%= @product.description  %></div>
 				<div class="col-md-1"><%= @product.price*quantity  %></div>
-				<div class="col-md-1"><%= link_to 'remove', carts_update_path(:product_id=>@product.id), :remote=>true%></div>	
+				<div class="col-md-1"><%= link_to '', carts_update_path(:product_id=>@product.id), :remote=>true, :class=> 'glyphicon glyphicon-remove-circle'%></div>	
 			</div>
 			<br>
 		<% end -%>
@@ -54,7 +54,7 @@
  <div class="footer row">
       <div class="col-md-7"> <%= link_to "CONTINUE SHOPPING", controller: "/homes", :action => :index  %></div>
      <div class="col-md-3" style="margin-left:15px;color:black;background-color:">
-      <%= link_to_unless session[:temporary_shopping_cart].length <=0 , "PLACE ORDER",  controller: "/homes", :action => "generate_bill", total_amount: total_amount if CartsHelper.check_availabilty() %></div>
+      <%= link_to_unless session[:temporary_shopping_cart].length <=0 , "PLACE ORDER",  controller: "/homes", :action => "generate_bill", total_amount: total_amount  %></div>
       
       </div>
 </div>

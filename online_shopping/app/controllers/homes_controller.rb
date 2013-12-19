@@ -35,4 +35,21 @@ class HomesController < ApplicationController
     product_id=Product.find_by_name(params[:id]).id
     @product = Product.find(product_id)
   end
+
+  def add_in_cart
+    product_id=params[:id]
+    if !session[:temporary_shopping_cart]
+      session[:temporary_shopping_cart] =[]  
+    end 
+    flag=0 
+    session[:temporary_shopping_cart].each do |product_hash| 
+      if (product_hash.has_key?(product_id)) 
+        flag=1 
+        product_hash[product_hash.keys[0]]=product_hash.values[0]+1 
+      end  
+    end  
+    if flag==0 
+      session[:temporary_shopping_cart] << {product_id => 1}  
+    end
+  end
 end
