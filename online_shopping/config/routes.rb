@@ -12,8 +12,8 @@ OnlineShopping::Application.routes.draw do
   get "bills/show" 
 
   resources :bills
-get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
- get '/homes/generate_bill', :controller => 'homes', :action => 'generate_bill'
+  get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
+  get '/homes/generate_bill', :controller => 'homes', :action => 'generate_bill'
   resources :homes
 
   resources :carts do 
@@ -37,7 +37,7 @@ get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
   #get "homes/index"
   match 'subcategory/:id' => 'homes#subcategory', as: :homes_subcategory, via: [:get, :post]
   match 'category_product/:id' => 'homes#category_product', as: 'subcategory/category_product', via: [:get, :post]
-  match 'product_info/:id' => 'homes#product_info', as: 'category_product/product_info', via: [:get, :post]
+  match 'product_info/:id' => 'homes#product_info', as: 'category_product/product_info', via: [:get, :post], :id => /.*/
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
