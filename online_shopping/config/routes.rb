@@ -22,6 +22,11 @@ get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
     end
   end
 
+  resources :categories
+  resources :roles
+  resources :addresses
+  resources :products
+  resources :product_details
   devise_for :users, :controllers => { registrations: 'users/registrations'  }    
   get "addresses/index"
   get "roles/index"
@@ -31,6 +36,8 @@ get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
   root 'homes#index'
   #get "homes/index"
   match 'subcategory/:id' => 'homes#subcategory', as: :homes_subcategory, via: [:get, :post]
+  match 'category_product/:id' => 'homes#category_product', as: 'subcategory/category_product', via: [:get, :post]
+  match 'product_info/:id' => 'homes#product_info', as: 'category_product/product_info', via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -46,11 +53,6 @@ get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :categories
-  resources :roles
-  resources :addresses
-  resources :products
-  resources :product_details
 
   #match "products/:name", to: 'products#show', as: :name, via: [:get]
 

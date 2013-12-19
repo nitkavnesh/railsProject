@@ -1,7 +1,11 @@
 <script type= "text/javascript">
-	function checkCart()
+	function generateBill()
 	{	
-		alert("hello")
+	<% if !user_signed_in?  %>
+		window.location.href="/users/sign_in"
+	<% else  %>
+
+	<% end -%>
 	}
 </script>
 
@@ -30,12 +34,15 @@
 			</ul>
 
 
-	<ul class="nav navbar-nav navbar-right">
-				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<image class="cur_pont" src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
-				</li>		
+	    <ul class="nav navbar-nav navbar-right">
+	    	<% if !user_signed_in? || (user_signed_in?  && current_user.role_id== 2) %>
+		    	<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+						<image class="cur_pont" src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
+					</li>
+				<% end %>
 
 				<% if user_signed_in? %>
+
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
 						<%= link_to "Welcome #{current_user.name}"  %>
 					</li>		
@@ -43,41 +50,36 @@
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 						<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
 					</li>				
-					
-					<% else %>
-						<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+				<% else %>
+					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 						<%= link_to "signup", new_user_registration_path %>
-						</li>
-						<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+					</li>
+					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 						<%= link_to "sign in", new_user_session_path  %>
 					</li>	
 				<% end %>
+			</ul>	
+		</div>
+	</div>
+
 
 <% if user_signed_in?  && current_user.role_id== 1 %>
 		<div style="background-color: #0A3151;">
 			<div class="container">
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav">
-            <li class="active"><%= link_to 'category', categories_path %></li>
-            <li><%= link_to 'product', products_path %></li>
-            <li><%= link_to 'bills', bills_path %></li>
-            <li><%= link_to 'product_detail', product_details_path %></li>
-          </ul>
+			      <ul class="nav navbar-nav">
+			      				<li><%= link_to 'home', categories_path %></li>
+                     <li><%= link_to 'categories', categories_path %></li>
+                     <li><%= link_to 'products', products_path %></li>
+                     <li><%= link_to 'Bill detail', bills_path %></li>
+                      <li><%= link_to 'product details', product_details_path%></li>
+                  </ul>
 				</div>
 			</div>
 		</div>
 	<% else %>
 
 
-			</ul>
-
-
-			
-
-
-			
-		</div>
-	</div>
 	<div style="background-color: #0A3151;">
 		<div class="container">
 			<div class="collapse navbar-collapse navbar-ex1-collapse">

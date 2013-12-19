@@ -8,7 +8,7 @@
 				</div>
 				<div class="nav-section-cat-list">
 			  	<% @categories.each do |category| %>
-							<a class="hov_col cont nav-section-item tpadding5 bpadding5 " href=""  style="display: block; ">
+							<a class="hov-col cont nav-section-item tpadding5 bpadding5 " href="/category_product/<%= category.name %>"  style="display: block; ">
 								<%= category.name %>
 							</a>
 					<% end %>
@@ -22,12 +22,35 @@
 				<%= @cat_name %>
 			</h1>
 			<hr class="sub">
-			<div class="" style="height: 40px;">
-				<h1 class="header" style="height: 38px;">
-					<span style="text-transform: uppercase; font-size: 16px; margin-left: 10px;">
-						
-					</span>
-				</h1>
+			<div class="">
+				<ul class="ulBullet" style="margin-left:10px; margin-top:5px;">
+				<% @categories.each do |category| %>	
+					<% @products=Product.where(:category_id=>category.id) %>
+						<% @products.each do |product| %>
+								<li class="fltLeft" style="width: 200px; height: 320px; margin-left: 2px; margin-bottom:10px;">
+									<a class="fltLeft pr-hov-col" href="/product_info/<%= product.name %>" data-tracking-id="">
+										<div class="fltLeft">
+											<img class="pr-image-size" src="<%= product.image %>" style="margin-left:7px;">
+										</div>
+										<div class="pr-title" style="font-size: 13px;">
+											<span style="margin-top:5px;"><%= product.name %></span>
+										</div>
+
+										<div class="pr-border-top">
+											<span style="font-size:17px;">
+												<%= product.price %>
+											</span>
+										</div>
+										<div class="pr-border-top" style="font-size: 13px;">
+											<span class="pr-desc">
+												<%= product.description %>
+											</span>
+										</div>
+									</a>
+								</li>
+						<% end %>
+				<% end %>
+				</ul>
 			</div>
 
 		</div>

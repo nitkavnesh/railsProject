@@ -1,29 +1,29 @@
 class CategoriesController < ApplicationController
   def index
-  	@categories = Category.all
+    @categories = Category.all
   end
 
   def new
-  	@category=Category.new
+    @category=Category.new
   end
 
   def show
-  	@diff_category = Category.where(:parent_id=>params[:id])
+    @category = Category.find(params[:id])
   end
 
   def create
-  		@category=Category.new(get_category_parameter).save!
-    	redirect_to :categories
+      @category=Category.new(get_category_parameter).save!
+      redirect_to :categories
   end
 
   def edit
-  	@category = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def destroy
-  	@category = Category.find(params[:id])
-  	@category.destroy
-  	redirect_to categories_path
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to categories_path
   end
 
   def update
@@ -38,6 +38,6 @@ class CategoriesController < ApplicationController
 
   private 
   def get_category_parameter 
-  	params.require(:category).permit(:name, :parent_id, :image);
+    params.require(:category).permit(:name, :parent_id, :image);
   end
 end
