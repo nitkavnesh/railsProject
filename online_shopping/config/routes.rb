@@ -34,6 +34,7 @@ OnlineShopping::Application.routes.draw do
 
   # devise_for :users
   root 'homes#index'
+  match '/homes/add_in_cart/:id' => 'homes#add_in_cart', as: :homes_add_in_cart, via: [:get, :post]
   #get "homes/index"
   match 'subcategory/:id' => 'homes#subcategory', as: :homes_subcategory, via: [:get, :post]
   match 'category_product/:id' => 'homes#category_product', as: 'subcategory/category_product', via: [:get, :post]

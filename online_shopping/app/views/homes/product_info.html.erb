@@ -14,7 +14,7 @@
 						<span><%= @product.description %></span>
 					</div>
 					<div style="margin-top:50px; margin-left:50px; font-size: 15px;">
-						<button class="btn btn-primary">Order Now</button>
+						<%= button_to "Order Now", homes_add_in_cart_path(@product), remote: true, :class=>"btn btn-primary"  %>					
 					</div>
 					<div style="margin-top:20px; margin-left:50px; font-size: 15px;">
 						<ul class="buy-view-list">
