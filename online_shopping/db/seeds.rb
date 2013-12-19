@@ -19,28 +19,26 @@ category = Category.create(name: 'Music Books',parent_id: 2)
 category = Category.create(name: 'Indoor Games',parent_id: 3)
 category = Category.create(name: 'outdoor Games',parent_id: 3)
 
-#product = Product.create(name: 'Nokia s4', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nexus')
-#product = Product.create(name: 'Nokia 105', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nokia 105')
-#product = Product.create(name: 'Nokia 108', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nokia 108')
+product = Product.create(name: 'Nokia s4', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nexus')
+product = Product.create(name: 'Nokia 105', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nokia 105')
+product = Product.create(name: 'Nokia 108', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nokia 108')
 #product = Product.create(name: 'Nokia 111', description: 'nokia', category_id: 1, price: 15000, image_file_name: 'nokia 111')
 
-product_detail = ProductDetail.create( product_id: 1, unique_id: 2532)
 
-bill_detail = BillDetail.create( product_detail_id: 2, bill_id: 1, product_id: 1)
-bill_detail = BillDetail.create( product_detail_id: 3, bill_id: 1, product_id: 1)
-bill_detail = BillDetail.create( product_detail_id: 4, bill_id: 1, product_id: 1)
+
+#bill_detail = BillDetail.create( product_detail_id: 2, bill_id: 1, product_id: 1)
+#bill_detail = BillDetail.create( product_detail_id: 3, bill_id: 1, product_id: 1)
+#bill_detail = BillDetail.create( product_detail_id: 4, bill_id: 1, product_id: 1)
+
+
+#bill_detail = BillDetail.create( product_detail_id: 2, bill_id: 1, product_id: 1)
+#bill_detail = BillDetail.create( product_detail_id: 3, bill_id: 1, product_id: 1)
+#bill_detail = BillDetail.create( product_detail_id: 4, bill_id: 1, product_id: 1)
 
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2533)
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2534)
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2535)
-bill_detail = BillDetail.create( product_detail_id: 2, bill_id: 1, product_id: 1)
-bill_detail = BillDetail.create( product_detail_id: 3, bill_id: 1, product_id: 1)
-bill_detail = BillDetail.create( product_detail_id: 4, bill_id: 1, product_id: 1)
-
-#product_detail = ProductDetail.create( product_id: 1, unique_id: 2533)
-#product_detail = ProductDetail.create( product_id: 1, unique_id: 2534)
-#product_detail = ProductDetail.create( product_id: 1, unique_id: 2535)
-#product_detail = ProductDetail.create( product_id: 1, unique_id: 2532)
+product_detail = ProductDetail.create( product_id: 1, unique_id: 2532)
 
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2533)
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2534)

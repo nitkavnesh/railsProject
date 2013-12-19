@@ -1,11 +1,7 @@
 <script type= "text/javascript">
-	function generateBill()
+	function checkCart()
 	{	
-	<% if !user_signed_in?  %>
-		window.location.href="/users/sign_in"
-	<% else  %>
-
-	<% end -%>
+		alert("hello")
 	}
 </script>
 
@@ -168,10 +164,7 @@
         <%= render template: "carts/index"  %>
 
       </div>
-      <div class="modal-footer">
-       <%= link_to "CONTINUE SHOPPING", controller: "/homes", :action => :index  %>
-      <%= link_to "PLACE ORDER", controller: "/homes", :action => "generate_bill" %>
-      </div>
+     
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

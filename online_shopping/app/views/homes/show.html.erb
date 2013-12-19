@@ -1,7 +1,19 @@
 <script type="text/javascript">
 	function showCart()
-	{
-	<% (session[:temporary_shopping_cart] ||= []) << @product.id %>
+	{ 
+		<% if !session[:temporary_shopping_cart] %>
+			<%	session[:temporary_shopping_cart] =[]  %>
+		<% end %>
+		<% flag=0 %>
+		<% session[:temporary_shopping_cart].each do |product_hash| %>
+			<%  if (product_hash.has_key?(@product.id)) %>
+				<% flag=1 %>
+				<% product_hash[product_hash.keys[0]]=product_hash.values[0]+1 %>
+			<% end %> 
+		<% end %> 
+		<%if flag==0 %>
+			<%	session[:temporary_shopping_cart] << {@product.id=> 1}  %>
+		<% end %>
 	$("#cart").click();
 }
 </script>

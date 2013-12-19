@@ -17,8 +17,8 @@ class CartsController < ApplicationController
   end
 
   def update
-   product_id=params[:product_id].to_i
-   p session[:temporary_shopping_cart].delete(product_id)       
+   product_id=params[:product_id].to_i   
+   session[:temporary_shopping_cart].delete_if {|hash| hash.keys[0] == product_id }        
   end
 
   def show
