@@ -8,8 +8,13 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    if user_signed_in?  && current_user.role_id== 1
   	@diff_category = Category.where(:parent_id=>params[:id])
-  end
+  else
+    category_id=Category.find_by_name(params[:id]).id
+    @products = Product.where(category_id: category_id)
+end
+end
 
   def create
   		@category=Category.new(get_category_parameter).save!
