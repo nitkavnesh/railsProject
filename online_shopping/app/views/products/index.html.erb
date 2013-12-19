@@ -31,13 +31,14 @@
               <td><%= product.description %></td>
               <td><%= product.price %></td>
               <td> <img src="<%= product.image %>" style="height:50px;width:50px;" alt="product image"/></td>
-              <td><%= link_to 'Show', product_path %></td>
-              <td><%= link_to '', edit_product_path(product), :class=>"glyphicon glyphicon-edit",:title=>"delete" %></td>
+              <td><%= link_to 'Show', product, :class=>"mrg_left" %></td>
+              <td><%= link_to '', edit_product_path(product), :class=>"glyphicon glyphicon-edit",:title=>"edit" %></td>
               <td><%= link_to '', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"glyphicon glyphicon-trash",:title=>"delete" %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
+
       <br>
 
      

@@ -10,7 +10,6 @@
 </script>
 
 <div>
-<!-- Header -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #005387;">
 	<div class="container"> 
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -34,12 +33,15 @@
 			</ul>
 
 
-	<ul class="nav navbar-nav navbar-right">
-				<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
-					<image class="cur_pont" src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
-				</li>		
+	    <ul class="nav navbar-nav navbar-right">
+	    	<% if !user_signed_in? || (user_signed_in?  && current_user.role_id== 2) %>
+		    	<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+						<image class="cur_pont" src="/assets/cart.png" style="width: 50px; height: 50px;" data-toggle="modal" data-target="#myCart" />
+					</li>
+				<% end %>
 
 				<% if user_signed_in? %>
+
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
 						<%= link_to "Welcome #{current_user.name}"  %>
 					</li>		
@@ -47,89 +49,96 @@
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 						<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
 					</li>				
-					
-					<% else %>
-						<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+				<% else %>
+					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 						<%= link_to "signup", new_user_registration_path %>
-						</li>
-						<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
+					</li>
+					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
 						<%= link_to "sign in", new_user_session_path  %>
 					</li>	
 				<% end %>
+			</ul>	
+		</div>
+	</div>
+
 
 <% if user_signed_in?  && current_user.role_id== 1 %>
 		<div style="background-color: #0A3151;">
 			<div class="container">
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav">
-            <li class="active"><%= link_to 'category', categories_path %></li>
-            <li><%= link_to 'product', products_path %></li>
-            <li><%= link_to 'bills', bills_path %></li>
-            <li><%= link_to 'product_detail', product_details_path %></li>
-          </ul>
+			      <ul class="nav navbar-nav">
+			      				<li><%= link_to 'home', categories_path %></li>
+                     <li><%= link_to 'categories', categories_path %></li>
+                     <li><%= link_to 'products', products_path %></li>
+                     <li><%= link_to 'Customers', bills_path %></li>
+                      <li><%= link_to 'product details', product_details_path%></li>
+                  </ul>
 				</div>
 			</div>
 		</div>
 	<% else %>
 
-
-			</ul>
-
-
-			
-
-
-			
-		</div>
-	</div>
 	<div style="background-color: #0A3151;">
 		<div class="container">
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ELECTRONICS<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Mobiles</a>
-              	<ul class="ulBullet">
-                  <li><a href="#" style="transition: right 100ms;">Mobiles</a></li>
-                  <li><a href="#">Laptops</a></li>
-                  <li><a href="#">Cameras</a></li>
-            	</ul>
-              </li>
-              <li><a href="#">Laptops</a></li>
-              <li><a href="#">Cameras</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">ELECTRONICS<b class="caret"></b></a>
+	                  <ul class="dropdown-menu">
+	                    <li><a href="#">Mobiles</a>
+	                    	<ul class="ulBullet">
+			                    <li><a href="#" style="transition: right 100ms;">Mobiles</a></li>
+			                    <li><a href="#">Laptops</a></li>
+			                    <li><a href="#">Cameras</a></li>
+		                	</ul>
+	                    </li>
+	                    <li><a href="#">Laptops</a></li>
+	                    <li><a href="#">Cameras</a></li>
+	                    <li class="divider"></li>
+	                    <li class="dropdown-header">Nav header</li>
+	                    <li><a href="#">Separated link</a></li>
+	                    <li><a href="#">One more separated link</a></li>
+	                  </ul>
+	                </li>
 
 					<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">BOOKS<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">BOOKS & MEDIA<b class="caret"></b></a>
+	                  <ul class="dropdown-menu">
+	                    <li><a href="#">Action</a></li>
+	                    <li><a href="#">Another action</a></li>
+	                    <li><a href="#">Something else here</a></li>
+	                    <li class="divider"></li>
+	                    <li class="dropdown-header">Nav header</li>
+	                    <li><a href="#">Separated link</a></li>
+	                    <li><a href="#">One more separated link</a></li>
+	                  </ul>
+	                </li>
 
 					<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">FASHION<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">MEN<b class="caret"></b></a>
+	                  <ul class="dropdown-menu">
+	                    <li><a href="#">Action</a></li>
+	                    <li><a href="#">Another action</a></li>
+	                    <li><a href="#">Something else here</a></li>
+	                    <li class="divider"></li>
+	                    <li class="dropdown-header">Nav header</li>
+	                    <li><a href="#">Separated link</a></li>
+	                    <li><a href="#">One more separated link</a></li>
+	                  </ul>
+	                </li>
+
+					<li class="dropdown">
+	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">WOMEN<b class="caret"></b></a>
+	                  <ul class="dropdown-menu">
+	                    <li><a href="#">Action</a></li>
+	                    <li><a href="#">Another action</a></li>
+	                    <li><a href="#">Something else here</a></li>
+	                    <li class="divider"></li>
+	                    <li class="dropdown-header">Nav header</li>
+	                    <li><a href="#">Separated link</a></li>
+	                    <li><a href="#">One more separated link</a></li>
+	                  </ul>
+	                </li>
 				</ul>
 			</div>
 		</div>
@@ -140,32 +149,3 @@
 
 <!--header End -->
 </div>
-
-
-
-<div class="modal fade" id="myCart">
-  <div class="modal-dialog" >
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title"><u>SHOPPING CART</u></h4>
-      </div>
-      <div class="modal-body">
-       
-        <%= render template: "carts/index"  %>
-
-      </div>
-      <div class="modal-footer">
-       <%= link_to "CONTINUE SHOPPING", controller: "/homes", :action => :index  %>
-      <%= link_to "PLACE ORDER", controller: "/homes", :action => "generate_bill" %>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
- 
- 
-
-
