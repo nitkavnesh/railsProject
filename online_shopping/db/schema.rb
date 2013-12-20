@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 20131216111856) do
 
   create_table "product_details", force: true do |t|
     t.integer  "unique_id"
-    t.boolean  "available",  default: true
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
