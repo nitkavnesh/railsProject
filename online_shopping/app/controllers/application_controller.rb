@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-before_filter :update_sanitized_params, if: :devise_controller?
+before_filter :update_sanitized_params, if: :devise_controller? 
+before_filter :ensure_setting
 
  before_filter :configure_permitted_parameters, if: :devise_controller?
 
@@ -28,5 +29,7 @@ end
   session[:account_type] = current_user.account_type
   user_path(resource)
 end
-
+def ensure_setting
+    @categories = Category.all
+end
 end
