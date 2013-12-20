@@ -1,9 +1,26 @@
-<%= form_for @address  do |f| %>
+<div class="modal-body row">
+  <div class="col-md-6">
+  	<% if user_signed_in?  %>
+  	 <h3>Existing Adresses</h3>    
+     <% Address.where(:user_id=>current_user.id).to_a.each do |address|  %>
+       <a href="#"> <%= address.address %>
+  		<%= address.landmark %><br/>
+  		<%= address.city %><br/>
+  		<%= address.state %><br/>
+  		<%= address.country %><br/></a>
+  	<% end %>
+  	<% end %>
+  </div>
+  <div class="col-md-6">
+  	<h1> New Address</h1>
+  <%= form_for @address  do |f| %>
 <%= f.label :User %>
 <div class="controls mrg_top">
 	<%= f.collection_select :user_id, User.all, :id, :name,{:prompt => "Select Address"},{ "style" => "width:200px;height:30px" } %>
 	</select>
 </div>
+<%= f.label :Address %>
+<%= f.text_area :address,  :class=> "form-control"%>
 <%= f.label :Address %>
 <%= f.text_area :address,  :class=> "form-control"%>
 <%= f.label :landmark %>
@@ -18,3 +35,12 @@
 <%= f.text_field :country,  :class=> "form-control"%><br/>
 <%= f.submit :class=>"btn btn-primary mrg_top" %>
 <% end %>
+</div>
+</div>
+
+
+
+
+
+
+
