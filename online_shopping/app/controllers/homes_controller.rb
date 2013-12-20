@@ -20,7 +20,7 @@ class HomesController < ApplicationController
   def subcategory
     p params[:id]
   	category_id=Category.find_by_name(params[:id]).id
-    @categories = Category.where(parent_id: category_id)
+    @categories2 = Category.where(parent_id: category_id)
     @products = Product.where(category_id: category_id)
     @cat_name = params[:id]
   end
