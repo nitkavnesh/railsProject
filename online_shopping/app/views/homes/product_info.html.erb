@@ -12,8 +12,10 @@
 					<hr class="pro-name">
 					<div style="margin-top:10px; font-size: 15px;">
 						<span><%= @product.description %></span>
-					</div>
-					<div style="margin-top:50px; margin-left:50px; font-size: 15px;">
+					</div><br><br>
+					
+					<strong>OUT OF STOCK</strong>					
+					<div style="margin-top:50px; margin-left:50px; font-size: 15px;">						
 						<%= button_to "Order Now", homes_add_in_cart_path(@product), remote: true, :class=>"btn btn-primary"  %>					
 					</div>
 					<div style="margin-top:20px; margin-left:50px; font-size: 15px;">
@@ -35,7 +37,7 @@
 							<li class="" data-cod-listener-attached="true">
 								<strong>30 days</strong>
 								replacement Gaurantee
-							</li>
+							</li>							
 						<ul>
 					</div>
 			</div>
