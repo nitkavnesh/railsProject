@@ -12,7 +12,7 @@
   <% end -%>
  </h4></p>
  <p>
- <strong>Total Bill:</strong> <%= @bill.total_amount %>
+ <strong>Total Bill:</strong> <%= p @bill.total_amount %>
 </p>
 <hr>
  <% if BillDetail.where(bill_id: @bill.id) %>

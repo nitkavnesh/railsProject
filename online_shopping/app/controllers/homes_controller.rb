@@ -9,12 +9,11 @@ class HomesController < ApplicationController
   end
  
   def generate_bill
-
-  	if !user_signed_in?
-  		redirect_to new_user_session_path
-  	else
-  		redirect_to bills_create_path
-  	end
+  	#if !user_signed_in?
+  	#	redirect_to new_user_session_path
+  #	else
+  #		redirect_to bills_create_path total_amount: params[:total_amount]
+  #	end
   end
 
   def subcategory
@@ -79,5 +78,6 @@ class HomesController < ApplicationController
       session[:temporary_shopping_cart] << {product_id => 1}  
     end
   end
+  helper_method :check_availabilty
 
 end

@@ -13,8 +13,9 @@
 					<div style="margin-top:10px; font-size: 15px;">
 						<span><%= @product.description %></span>
 					</div><br><br>
-					
-					<strong>OUT OF STOCK</strong>					
+					<% if(!check_availabilty(@product.id)) %>
+					<div style="color:red;"><strong>OUT OF STOCK</strong></div>
+				  <% end -%>					
 					<div style="margin-top:50px; margin-left:50px; font-size: 15px;">						
 						<%= button_to "Order Now", homes_add_in_cart_path(@product), remote: true, :class=>"btn btn-primary"  %>					
 					</div>
