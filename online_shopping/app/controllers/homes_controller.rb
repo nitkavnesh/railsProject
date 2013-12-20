@@ -5,7 +5,7 @@ class HomesController < ApplicationController
   end
 
   def show
-  	@product = Product.find(1)
+  	#@product = Product.find(1)
   end
  
   def generate_bill
@@ -41,7 +41,7 @@ class HomesController < ApplicationController
     if(check_availabilty(product_id))
       update_session(product_id)
     else
-      flash[:notice] = "#{Product.find(product_id).name} is not available in this quantity"      
+      flash[:notice] = "#{Product.find(product_id).name} is not available in this quantity"            
     end
   end
 

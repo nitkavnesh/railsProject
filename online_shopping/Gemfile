@@ -45,6 +45,9 @@ end
 
 gem "prototype-rails", "~> 4.0.0"
 
+## gem for searching 
+gem "thinking-sphinx", "~> 3.0.2"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
