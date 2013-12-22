@@ -12,10 +12,10 @@ class BillsController < ApplicationController
       total_amount=0
       session[:temporary_shopping_cart].each do |product_hash|
         product_id=product_hash.keys[0]
-        @product = Product.find(product_id)
-        total_amount += @product.price       
+        @product = Product.find(product_id)               
         @product_detail_array = ProductDetail.where(product_id: product_id, available: 1).limit(product_hash.values[0]).to_a
         @product_detail_array.each do |product_detail|
+          total_amount += @product.price
           product_detail.available=0
           product_detail.save
           product_detail_id=product_detail.id

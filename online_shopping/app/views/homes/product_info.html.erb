@@ -13,11 +13,13 @@
 					<div style="margin-top:10px; font-size: 15px;">
 						<span><%= @product.description %></span>
 					</div><br><br>
+					<% enable=1 %>
 					<% if(!check_availabilty(@product.id)) %>
+					<% enable=0 %>
 					<div style="color:red;"><strong>OUT OF STOCK</strong></div>
 				  <% end -%>					
-					<div style="margin-top:50px; margin-left:50px; font-size: 15px;">						
-						<%= button_to "Order Now", homes_add_in_cart_path(@product), remote: true, :class=>"btn btn-primary"  %>					
+					<div style="margin-top:50px; margin-left:50px; font-size: 15px;">				
+						<%= button_to  "Add IN Cart", homes_add_in_cart_path(@product), remote: true, :disabled => enable== 0, :class=>"btn btn-primary"  %>					
 					</div>
 					<div style="margin-top:20px; margin-left:50px; font-size: 15px;">
 						<ul class="buy-view-list">
