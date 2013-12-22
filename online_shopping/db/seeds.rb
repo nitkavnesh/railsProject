@@ -23,7 +23,23 @@
 #bill_detail = BillDetail.create( product_detail_id: 3, bill_id: 1, product_id: 1)
 #bill_detail = BillDetail.create( product_detail_id: 4, bill_id: 1, product_id: 1)
 
+product_detail = ProductDetail.create( product_id: 1, unique_id: 2532)
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2533)
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2534)
 product_detail = ProductDetail.create( product_id: 1, unique_id: 2535)
-product_detail = ProductDetail.create( product_id: 1, unique_id: 2532)
+
+
+product_detail = ProductDetail.create( product_id: 2, unique_id: 2536)
+product_detail = ProductDetail.create( product_id: 2, unique_id: 2537)
+product_detail = ProductDetail.create( product_id: 2, unique_id: 2538)
+product_detail = ProductDetail.create( product_id: 2, unique_id: 2539)
+
+product_detail = ProductDetail.create( product_id: 3, unique_id: 2540)
+product_detail = ProductDetail.create( product_id: 3, unique_id: 2541)
+product_detail = ProductDetail.create( product_id: 3, unique_id: 2542)
+product_detail = ProductDetail.create( product_id: 3, unique_id: 2543)
+
+product_detail = ProductDetail.create( product_id: 4, unique_id: 2544)
+product_detail = ProductDetail.create( product_id: 4, unique_id: 2545)
+product_detail = ProductDetail.create( product_id: 4, unique_id: 2546)
+product_detail = ProductDetail.create( product_id: 4, unique_id: 2547)

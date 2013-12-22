@@ -8,8 +8,14 @@ class AddressesController < ApplicationController
   end
 
   def create
-  	@address = Address.new(get_address_parameter).save!
-  	redirect_to :addresses
+  	@address = Address.new(get_address_parameter)
+    @address.user_id=current_user.id
+    @address.save!
+    if current_user.role_id==1
+      redirect_to :addresses
+    else
+      redirect_to bills_create_path address_id: @address.id
+    end
   end
 
   def show
@@ -38,6 +44,6 @@ class AddressesController < ApplicationController
 
   private 
   def get_address_parameter 
-  	params.require(:address).permit(:user_id, :address, :landmark, :city, :state, :country, :pincode);
+  	params.require(:address).permit(:address, :landmark, :city, :state, :country, :pincode);
   end
 end
