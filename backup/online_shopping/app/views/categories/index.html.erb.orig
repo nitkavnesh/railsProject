@@ -1,0 +1,44 @@
+<% if user_signed_in?  && current_user.role_id== 1 %>
+  <%= render 'categories/admin' %>
+<%else%>
+  <%= render 'categories/user' %>
+
+<<<<<<< HEAD
+<% end %>
+=======
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Parent Category</th>
+            <th>Image</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <td><%= category.name %></td>
+              <td><%= get_parent_name(category.parent_id) %></td>
+              <% if category.image?%>
+                <td><%= category.image %></td>
+              <% end %>
+              <td><%= link_to 'Show', category, :class=>"mrg_left" %></td>
+              <td><%= link_to 'Edit', edit_category_path(category), :class=>"mrg_left" %></td>
+              <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"mrg_left" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Category', new_category_path %>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+>>>>>>> c1bde8f863a25a389da240f8dcdcb9763b0e26a4
