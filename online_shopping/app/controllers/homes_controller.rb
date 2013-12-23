@@ -1,20 +1,19 @@
 class HomesController < ApplicationController
-
+  
   def index
   	@categories = Category.all
   end
 
   def show
-  	@product = Product.find(1)
+  	#@product = Product.find(1)
   end
  
   def generate_bill
-
-  	if !user_signed_in?
-  		redirect_to new_user_session_path
-  	else
-  		redirect_to bills_create_path
-  	end
+  	#if !user_signed_in?
+  	#	redirect_to new_user_session_path
+  #	else
+  #		redirect_to bills_create_path total_amount: params[:total_amount]
+  #	end
   end
 
   def subcategory
@@ -41,7 +40,7 @@ class HomesController < ApplicationController
     if(check_availabilty(product_id))
       update_session(product_id)
     else
-      flash[:notice] = "#{Product.find(product_id).name} is not available in this quantity"      
+      flash[:notice] = "#{Product.find(product_id).name} is not available in this quantity"            
     end
   end
 
@@ -79,5 +78,6 @@ class HomesController < ApplicationController
       session[:temporary_shopping_cart] << {product_id => 1}  
     end
   end
+  helper_method :check_availabilty
 
 end

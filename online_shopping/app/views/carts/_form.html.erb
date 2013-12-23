@@ -56,7 +56,7 @@
  <div class="footer row">
       <div class="col-md-7"> <%= link_to "CONTINUE SHOPPING", controller: "/homes", :action => :index  %></div>
      <div class="col-md-3" style="margin-left:15px;color:black;background-color:">
-      <%= link_to_unless session[:temporary_shopping_cart].length <=0 , "PLACE ORDER",  controller: "/homes", :action => "generate_bill", total_amount: total_amount  %></div>
+      <%= link_to_unless session[:temporary_shopping_cart].length <=0 , "PLACE ORDER",  controller: "/homes", :action => "generate_bill" %></div>
       
       </div>
 </div>

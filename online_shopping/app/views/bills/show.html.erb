@@ -4,17 +4,17 @@
     
 <p><strong>Bill Id:</strong>
  <%= @bill.id %></p>
- <p><strong>User_name :</stong>
-  <% if @bill.user %>
-  <%= @bill.user.name %></td>
-  <% else %>
-  Nill 
-  <% end -%>
+ <p><strong>Name :</stong>  
+  <%= @bill.user.name %></td>  
  </h4></p>
  <p>
- <strong>Total Bill:</strong> <%= @bill.total_amount %>
+ <strong>Total Bill:</strong> <%= p @bill.total_amount %>
 </p>
-<hr>
+ <p>
+ <strong>Shipping Address:</strong> <%= "#{@address.address}. #{@address.landmark}" %><br>
+ <p><%= "#{@address.city} #{@address.state} #{@address.pincode}" %></p>
+ </p>
+ 
  <% if BillDetail.where(bill_id: @bill.id) %>
    <div class="" style="background-color: #424242; height: 40px; margin-top: 20px;">
         <h2 class="header" style="background-color: #424242; height: 38px;">
@@ -55,5 +55,12 @@ No detail Available
 <br>
 <h4>
   <br>
-<%= link_to 'Back', bills_path %>
+  <% session[:temporary_shopping_cart]=[] %>
+  <input type="button" id="print" onclick="javascript:print()" value="Print">
+  <br><br>
+  <% if user_signed_in?  && current_user.role_id== 1 %>
+    <%= link_to 'Back', bills_path %>
+    <%else %>
+        <%= link_to 'Back', homes_path %>
+      <%end%>
 </h4>

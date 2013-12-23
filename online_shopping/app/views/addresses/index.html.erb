@@ -20,8 +20,9 @@
 
         <tbody>
           <% @addresses.each do |address| %>
-            <tr>
-              <td><%= User.find(address.user_id).name %></td>
+            <tr>                
+          <% p User.find(address.user_id).name  %>            
+              <td><%= User.find(address.user_id).name  %></td>
               <td><%= address.address %></td>
               <td><%= address.landmark %></td>
               <td><%= address.city %></td>

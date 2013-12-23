@@ -15,6 +15,7 @@
           <tr>
             <th>Product</th>
             <th>Unique Identity number</th>
+            <th> Avilability </th>
             <th></th>
             <th></th>
             <th></th>
@@ -26,6 +27,7 @@
             <tr>
               <td><%= Product.find(product_detail.product_id).name %></td>
               <td><%= product_detail.unique_id %></td>
+              <td><%= product_detail.available %> </td>
               <td><%= link_to 'Show', product_detail, :class=>"mrg_left" %>
               </td>
               <td>
