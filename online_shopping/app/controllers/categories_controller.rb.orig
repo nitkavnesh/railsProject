@@ -1,15 +1,25 @@
 class CategoriesController < ApplicationController
   def index
+<<<<<<< HEAD
     #to display all the categories in the index page
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
     @categories = Category.all
   end
 
   def new
+<<<<<<< HEAD
     #to add new category
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
     @category=Category.new
   end
 
   def show
+<<<<<<< HEAD
+    #to show the product to particular id
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
     @category = Category.find(params[:id])
   end
 

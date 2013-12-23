@@ -15,8 +15,14 @@ OnlineShopping::Application.routes.draw do
 get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
  get '/homes/generate_bill', :controller => 'homes', :action => 'generate_bill'
  get '/homes/subcategory/:id', :controller => 'homes', :action => 'subcategory'
+<<<<<<< HEAD
  get '/homes/user_details', :controller => 'homes', :action => 'user_details'
   resources :homes
+ 
+=======
+  resources :homes
+
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
   resources :carts do 
     collection do
       get :index

@@ -1,16 +1,25 @@
 class AddressesController < ApplicationController
   def index
+<<<<<<< HEAD
     #get all the adress in the index page
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
   	@addresses = Address.all
   end
 
   def new
+<<<<<<< HEAD
     #to add new adress
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
   	@address = Address.new
   end
 
   def create
+<<<<<<< HEAD
     #create the new address  
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
   	@address = Address.new(get_address_parameter)
     @address.user_id=current_user.id
     @address.save!
@@ -37,7 +46,10 @@ class AddressesController < ApplicationController
 
   def update
     @address = Address.find(params[:id])
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
     if @address.update_attributes(get_address_parameter)
       redirect_to addresses_path, :notice => "Address has successfully updated"
     else

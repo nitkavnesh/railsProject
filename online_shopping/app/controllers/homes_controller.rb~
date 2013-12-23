@@ -3,6 +3,8 @@ class HomesController < ApplicationController
   def index
   	@categories = Category.all
   end
+
+<<<<<<< HEAD
   def show  
   end
 
@@ -10,17 +12,22 @@ class HomesController < ApplicationController
   @user=User.find(params[:id])
   @user.destroy
   redirect_to homes_path
- end
+=======
+  def show  	
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
+  end
  
  # action for genearting bills;
   def generate_bill  
   end
 
+<<<<<<< HEAD
   def user_details
     @user_details=User.all
   end
 
-
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
   def subcategory
     p params[:id]
   	category_id=Category.find_by_name(params[:id]).id
