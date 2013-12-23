@@ -1,3 +1,4 @@
+<!-- form for address details of users with previous addresses  -->
 <div class="modal-body row">
   <div class="col-md-6">
   	<% if user_signed_in?  %>
@@ -13,6 +14,8 @@
       <% end %>
     <% end %>
   </div>
+
+  <!-- new shipping address details  -->
   <div class="col-md-6">
   	<h3> New Shipping Address</h3>
     <%= form_for @address  do |f| %>

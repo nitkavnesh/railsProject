@@ -4,16 +4,11 @@ class HomesController < ApplicationController
   	@categories = Category.all
   end
 
-  def show
-  	#@product = Product.find(1)
+  def show  	
   end
  
-  def generate_bill
-  	#if !user_signed_in?
-  	#	redirect_to new_user_session_path
-  #	else
-  #		redirect_to bills_create_path total_amount: params[:total_amount]
-  #	end
+ # action for genearting bills;
+  def generate_bill  
   end
 
   def subcategory
@@ -35,6 +30,7 @@ class HomesController < ApplicationController
     @product = Product.find(product_id)
   end
 
+  # function to update the session and add in cart
   def add_in_cart
     product_id=params[:id].to_i    
     if(check_availabilty(product_id))

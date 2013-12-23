@@ -120,4 +120,56 @@ Already up-to-date.
 Counting objects: 19, done.
 Delta compression using up to 4 threads.
 Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
-Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 2.93 KiB, done.
+Total 10 (delta 7), reused 0 (delta 0)
+remote: 
+remote: 
+remote: Repository does not have "hooks.redmine_gitolite.key" set. Skipping hook.[K
+remote: 
+remote: 
+To gitadmin@agile.neevtech.com:freshers-2013/rails-2.git
+   6a09cfe..0850628  master -> master
+]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git add .
+]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git commit -m ""a"d"d"r"e"s"s" "i"n" "p"r"o"g"r"e"s"s"
+[master 98d74c1] address in progress
+ 5 files changed, 46 insertions(+), 10 deletions(-)
+ create mode 100644 online_shopping/app/views/homes/generate_bill.html.erb
+]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git pull origin master
+remote: Counting objects: 25, done.[K
+remote: Compressing objects:   7% (1/13)   [Kremote: Compressing objects:  15% (2/13)   [Kremote: Compressing objects:  23% (3/13)   [Kremote: Compressing objects:  30% (4/13)   [Kremote: Compressing objects:  38% (5/13)   [Kremote: Compressing objects:  46% (6/13)   [Kremote: Compressing objects:  53% (7/13)   [Kremote: Compressing objects:  61% (8/13)   [Kremote: Compressing objects:  69% (9/13)   [Kremote: Compressing objects:  76% (10/13)   [Kremote: Compressing objects:  84% (11/13)   [Kremote: Compressing objects:  92% (12/13)   [Kremote: Compressing objects: 100% (13/13)   [Kremote: Compressing objects: 100% (13/13), done.[K
+remote: Total 14 (delta 10), reused 0 (delta 0)[K
+Unpacking objects:   7% (1/14)   Unpacking objects:  14% (2/14)   Unpacking objects:  21% (3/14)   Unpacking objects:  28% (4/14)   Unpacking objects:  35% (5/14)   Unpacking objects:  42% (6/14)   Unpacking objects:  50% (7/14)   Unpacking objects:  57% (8/14)   Unpacking objects:  64% (9/14)   Unpacking objects:  71% (10/14)   Unpacking objects:  78% (11/14)   Unpacking objects:  85% (12/14)   Unpacking objects:  92% (13/14)   Unpacking objects: 100% (14/14)   Unpacking objects: 100% (14/14), done.
+From agile.neevtech.com:freshers-2013/rails-2
+ * branch            master     -> FETCH_HEAD
+Auto-merging online_shopping/app/views/bills/show.html.erb
+Merge made by the 'recursive' strategy.
+ online_shopping/app/views/addresses/_form.html.erb |   30 ++++++++++++++++++--
+ online_shopping/app/views/addresses/new.html.erb   |    5 +---
+ online_shopping/app/views/bills/show.html.erb      |    7 ++++-
+ .../app/views/product_details/_form.html.erb       |    5 +++-
+ .../app/views/product_details/index.html.erb       |    2 ++
+ .../app/views/product_details/show.html.erb        |    6 ++++
+ 6 files changed, 47 insertions(+), 8 deletions(-)
+]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git pull origin master[1P[2@^[[1@[[1@3[1@~[1P[1P[1P[2P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P master[1Pmaster[1Paster[1Pster[1Pter[1Per[1Pr[Kadd .
+]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 3 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   app/views/homes/generate_bill.html.erb
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    Gemfile.orig
+#	deleted:    app/controllers/application_controller.rb.orig
+#	deleted:    app/views/homes/_users.html.erb.orig
+#	deleted:    app/views/homes/index.html.erb.orig
+#	deleted:    app/views/homes/show.js.erb
+#	deleted:    app/views/layouts/_navigation.html.erb~
+#	deleted:    config/.routes.rb.BASE.7446.rb.swp
+#	deleted:    config/.routes.rb.LOCAL.7446.rb.swp
+#	deleted:    co
