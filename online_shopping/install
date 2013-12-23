@@ -1,175 +1,0 @@
-Script started on Fri 20 Dec 2013 04:24:50 PM IST
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ rake thinking_sphinx:index
-rake aborted!
-Don't know how to build task 'thinking_sphinx:index'
-
-(See full trace by running task with --trace)
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ rake thinking_sphinx:start
-rake aborted!
-Don't know how to build task 'thinking_sphinx:start'
-
-(See full trace by running task with --trace)
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ rake thinking_sphinx:start[Kbrew install sphinx --mysql
-No command 'brew' found, did you mean:
- Command 'brec' from package 'bplay' (universe)
- Command 'qbrew' from package 'qbrew' (universe)
-brew: command not found
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git a[Kpull[K[K[K[Kadd >[K.
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   Gemfile
-#	modified:   Gemfile.lock
-#	modified:   app/controllers/homes_controller.rb
-#	new file:   app/indices/category_index.rb
-#	new file:   app/indices/product_index.rb
-#	modified:   app/models/category.rb
-#	modified:   app/views/users/registrations/new.html.erb
-#	new file:   config/development.sphinx.conf
-#	new file:   install
-#
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	deleted:    Gemfile.orig
-#	deleted:    app/controllers/application_controller.rb.orig
-#	deleted:    app/views/homes/_users.html.erb.orig
-#	deleted:    app/views/homes/index.html.erb.orig
-#	deleted:    app/views/homes/show.js.erb
-#	deleted:    app/views/layouts/_navigation.html.erb~
-#	deleted:    config/.routes.rb.BASE.7446.rb.swp
-#	deleted:    config/.routes.rb.LOCAL.7446.rb.swp
-#	deleted:    config/.routes.rb.REMOTE.7446.rb.swp
-#	deleted:    config/.routes.rb.swp
-#	deleted:    config/routes.rb.BACKUP.7446.rb
-#	deleted:    config/routes.rb.BASE.7446.rb
-#	deleted:    config/routes.rb.LOCAL.7446.rb
-#	deleted:    config/routes.rb.REMOTE.7446.rb
-#	deleted:    config/routes.rb.orig
-#
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git pull[K[K[K[Kcommit -m ""s"p"h"i"n"i"x" "i"n"s"t"a"l"l"
-[master e0fec10] sphinix install
- 7 files changed, 29 insertions(+), 4 deletions(-)
- create mode 100644 online_shopping/app/indices/category_index.rb
- create mode 100644 online_shopping/app/indices/product_index.rb
- create mode 100644 online_shopping/config/development.sphinx.conf
- create mode 100644 online_shopping/install
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git commit -m "sphinix install"status[K[K[K[K[K[K[Kpull orif[Kgin master
-remote: Counting objects: 128, done.[K
-remote: Compressing objects:   1% (1/80)   [Kremote: Compressing objects:   2% (2/80)   [Kremote: Compressing objects:   3% (3/80)   [Kremote: Compressing objects:   5% (4/80)   [Kremote: Compressing objects:   6% (5/80)   [Kremote: Compressing objects:   7% (6/80)   [Kremote: Compressing objects:   8% (7/80)   [Kremote: Compressing objects:  10% (8/80)   [Kremote: Compressing objects:  11% (9/80)   [Kremote: Compressing objects:  12% (10/80)   [Kremote: Compressing objects:  13% (11/80)   [Kremote: Compressing objects:  15% (12/80)   [Kremote: Compressing objects:  16% (13/80)   [Kremote: Compressing objects:  17% (14/80)   [Kremote: Compressing objects:  18% (15/80)   [Kremote: Compressing objects:  20% (16/80)   [Kremote: Compressing objects:  21% (17/80)   [Kremote: Compressing objects:  22% (18/80)   [Kremote: Compressing objects:  23% (19/80)   [Kremote: Compressing objects:  25% (20/80)   [Kremote: Compressing objects:  26% (21/80)   [Kremote: Compressing objects:  27% (22/80)   [Kremote: Compressing objects:  28% (23/80)   [Kremote: Compressing objects:  30% (24/80)   [Kremote: Compressing objects:  31% (25/80)   [Kremote: Compressing objects:  32% (26/80)   [Kremote: Compressing objects:  33% (27/80)   [Kremote: Compressing objects:  35% (28/80)   [Kremote: Compressing objects:  36% (29/80)   [Kremote: Compressing objects:  37% (30/80)   [Kremote: Compressing objects:  38% (31/80)   [Kremote: Compressing objects:  40% (32/80)   [Kremote: Compressing objects:  41% (33/80)   [Kremote: Compressing objects:  42% (34/80)   [Kremote: Compressing objects:  43% (35/80)   [Kremote: Compressing objects:  45% (36/80)   [Kremote: Compressing objects:  46% (37/80)   [Kremote: Compressing objects:  47% (38/80)   [Kremote: Compressing objects:  48% (39/80)   [Kremote: Compressing objects:  50% (40/80)   [Kremote: Compressing objects:  51% (41/80)   [Kremote: Compressing objects:  52% (42/80)   [Kremote: Compressing objects:  53% (43/80)   [Kremote: Compressing objects:  55% (44/80)   [Kremote: Compressing objects:  56% (45/80)   [Kremote: Compressing objects:  57% (46/80)   [Kremote: Compressing objects:  58% (47/80)   [Kremote: Compressing objects:  60% (48/80)   [Kremote: Compressing objects:  61% (49/80)   [Kremote: Compressing objects:  62% (50/80)   [Kremote: Compressing objects:  63% (51/80)   [Kremote: Compressing objects:  65% (52/80)   [Kremote: Compressing objects:  66% (53/80)   [Kremote: Compressing objects:  67% (54/80)   [Kremote: Compressing objects:  68% (55/80)   [Kremote: Compressing objects:  70% (56/80)   [Kremote: Compressing objects:  71% (57/80)   [Kremote: Compressing objects:  72% (58/80)   [Kremote: Compressing objects:  73% (59/80)   [Kremote: Compressing objects:  75% (60/80)   [Kremote: Compressing objects:  76% (61/80)   [Kremote: Compressing objects:  77% (62/80)   [Kremote: Compressing objects:  78% (63/80)   [Kremote: Compressing objects:  80% (64/80)   [Kremote: Compressing objects:  81% (65/80)   [Kremote: Compressing objects:  82% (66/80)   [Kremote: Compressing objects:  83% (67/80)   [Kremote: Compressing objects:  85% (68/80)   [Kremote: Compressing objects:  86% (69/80)   [Kremote: Compressing objects:  87% (70/80)   [Kremote: Compressing objects:  88% (71/80)   [Kremote: Compressing objects:  90% (72/80)   [Kremote: Compressing objects:  91% (73/80)   [Kremote: Compressing objects:  92% (74/80)   [Kremote: Compressing objects:  93% (75/80)   [Kremote: Compressing objects:  95% (76/80)   [Kremote: Compressing objects:  96% (77/80)   [Kremote: Compressing objects:  97% (78/80)   [Kremote: Compressing objects:  98% (79/80)   [Kremote: Compressing objects: 100% (80/80)   [Kremote: Compressing objects: 100% (80/80), done.[K
-remote: Total 86 (delta 67), reused 0 (delta 0)[K
-Unpacking objects:   1% (1/86)   Unpacking objects:   2% (2/86)   Unpacking objects:   3% (3/86)   Unpacking objects:   4% (4/86)   Unpacking objects:   5% (5/86)   Unpacking objects:   6% (6/86)   Unpacking objects:   8% (7/86)   Unpacking objects:   9% (8/86)   Unpacking objects:  10% (9/86)   Unpacking objects:  11% (10/86)   Unpacking objects:  12% (11/86)   Unpacking objects:  13% (12/86)   Unpacking objects:  15% (13/86)   Unpacking objects:  16% (14/86)   Unpacking objects:  17% (15/86)   Unpacking objects:  18% (16/86)   Unpacking objects:  19% (17/86)   Unpacking objects:  20% (18/86)   Unpacking objects:  22% (19/86)   Unpacking objects:  23% (20/86)   Unpacking objects:  24% (21/86)   Unpacking objects:  25% (22/86)   Unpacking objects:  26% (23/86)   Unpacking objects:  27% (24/86)   Unpacking objects:  29% (25/86)   Unpacking objects:  30% (26/86)   Unpacking objects:  31% (27/86)   Unpacking objects:  32% (28/86)   Unpacking objects:  33% (29/86)   Unpacking objects:  34% (30/86)   Unpacking objects:  36% (31/86)   Unpacking objects:  37% (32/86)   Unpacking objects:  38% (33/86)   Unpacking objects:  39% (34/86)   Unpacking objects:  40% (35/86)   Unpacking objects:  41% (36/86)   Unpacking objects:  43% (37/86)   Unpacking objects:  44% (38/86)   Unpacking objects:  45% (39/86)   Unpacking objects:  46% (40/86)   Unpacking objects:  47% (41/86)   Unpacking objects:  48% (42/86)   Unpacking objects:  50% (43/86)   Unpacking objects:  51% (44/86)   Unpacking objects:  52% (45/86)   Unpacking objects:  53% (46/86)   Unpacking objects:  54% (47/86)   Unpacking objects:  55% (48/86)   Unpacking objects:  56% (49/86)   Unpacking objects:  58% (50/86)   Unpacking objects:  59% (51/86)   Unpacking objects:  60% (52/86)   Unpacking objects:  61% (53/86)   Unpacking objects:  62% (54/86)   Unpacking objects:  63% (55/86)   Unpacking objects:  65% (56/86)   Unpacking objects:  66% (57/86)   Unpacking objects:  67% (58/86)   Unpacking objects:  68% (59/86)   Unpacking objects:  69% (60/86)   Unpacking objects:  70% (61/86)   Unpacking objects:  72% (62/86)   Unpacking objects:  73% (63/86)   Unpacking objects:  74% (64/86)   Unpacking objects:  75% (65/86)   Unpacking objects:  76% (66/86)   Unpacking objects:  77% (67/86)   Unpacking objects:  79% (68/86)   Unpacking objects:  80% (69/86)   Unpacking objects:  81% (70/86)   Unpacking objects:  82% (71/86)   Unpacking objects:  83% (72/86)   Unpacking objects:  84% (73/86)   Unpacking objects:  86% (74/86)   Unpacking objects:  87% (75/86)   Unpacking objects:  88% (76/86)   Unpacking objects:  89% (77/86)   Unpacking objects:  90% (78/86)   Unpacking objects:  91% (79/86)   Unpacking objects:  93% (80/86)   Unpacking objects:  94% (81/86)   Unpacking objects:  95% (82/86)   Unpacking objects:  96% (83/86)   Unpacking objects:  97% (84/86)   Unpacking objects:  98% (85/86)   Unpacking objects: 100% (86/86)   Unpacking objects: 100% (86/86), done.
-From agile.neevtech.com:freshers-2013/rails-2
- * branch            master     -> FETCH_HEAD
-Auto-merging online_shopping/app/controllers/homes_controller.rb
-Auto-merging online_shopping/Gemfile.lock
-Merge made by the 'recursive' strategy.
- online_shopping/Gemfile.lock                       |    6 +-
- .../app/controllers/application_controller.rb      |    7 +-
- .../app/controllers/homes_controller.rb            |    2 +-
- online_shopping/app/views/addresses/_form.html.erb |    6 +-
- online_shopping/app/views/addresses/index.html.erb |    7 +-
- online_shopping/app/views/bills/index.html.erb     |   19 ++--
- online_shopping/app/views/bills/show.html.erb      |   78 ++++++++--------
- .../app/views/categories/_form.html.erb            |   11 +--
- online_shopping/app/views/categories/edit.html.erb |    4 +-
- .../app/views/categories/index.html.erb            |    8 +-
- online_shopping/app/views/categories/new.html.erb  |    4 +-
- online_shopping/app/views/categories/show.html.erb |    6 +-
- online_shopping/app/views/homes/_users.html.erb    |   93 +++-----------------
- .../app/views/homes/subcategory.html.erb           |    4 +-
- .../app/views/layouts/_navigation.html.erb         |   69 +++------------
- .../app/views/product_details/_form.html.erb       |    6 +-
- .../app/views/product_details/edit.html.erb        |    4 +-
- .../app/views/product_details/index.html.erb       |   17 ++--
- .../app/views/product_details/new.html.erb         |    4 +-
- .../app/views/product_details/show.html.erb        |    4 +-
- online_shopping/app/views/products/_form.html.erb  |    7 +-
- online_shopping/app/views/products/edit.html.erb   |    4 +-
- online_shopping/app/views/products/index.html.erb  |    2 +
- online_shopping/app/views/products/new.html.erb    |    4 +-
- online_shopping/app/views/products/show.html.erb   |    6 +-
- online_shopping/config/routes.rb                   |    3 +-
- online_shopping/db/schema.rb                       |    1 -
- 27 files changed, 148 insertions(+), 238 deletions(-)
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git [K[K[K[Kgit push origin master ""[K[K
-Counting objects: 49, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/25)   Compressing objects:   8% (2/25)   Compressing objects:  12% (3/25)   Compressing objects:  16% (4/25)   Compressing objects:  20% (5/25)   Compressing objects:  24% (6/25)   Compressing objects:  28% (7/25)   Compressing objects:  32% (8/25)   Compressing objects:  36% (9/25)   Compressing objects:  40% (10/25)   Compressing objects:  44% (11/25)   Compressing objects:  48% (12/25)   Compressing objects:  52% (13/25)   Compressing objects:  56% (14/25)   Compressing objects:  60% (15/25)   Compressing objects:  64% (16/25)   Compressing objects:  68% (17/25)   Compressing objects:  72% (18/25)   Compressing objects:  76% (19/25)   Compressing objects:  80% (20/25)   Compressing objects:  84% (21/25)   Compressing objects:  88% (22/25)   Compressing objects:  92% (23/25)   Compressing objects:  96% (24/25)   Compressing objects: 100% (25/25)   Compressing objects: 100% (25/25), done.
-Writing objects:   3% (1/27)   Writing objects:   7% (2/27)   Writing objects:  11% (3/27)   Writing objects:  14% (4/27)   Writing objects:  18% (5/27)   Writing objects:  22% (6/27)   Writing objects:  25% (7/27)   Writing objects:  29% (8/27)   Writing objects:  33% (9/27)   Writing objects:  37% (10/27)   Writing objects:  40% (11/27)   Writing objects:  44% (12/27)   Writing objects:  48% (13/27)   Writing objects:  51% (14/27)   Writing objects:  55% (15/27)   Writing objects:  59% (16/27)   Writing objects:  62% (17/27)   Writing objects:  66% (18/27)   Writing objects:  70% (19/27)   Writing objects:  74% (20/27)   Writing objects:  77% (21/27)   Writing objects:  81% (22/27)   Writing objects:  85% (23/27)   Writing objects:  88% (24/27)   Writing objects:  92% (25/27)   Writing objects:  96% (26/27)   Writing objects: 100% (27/27)   Writing objects: 100% (27/27), 2.56 KiB, done.
-Total 27 (delta 17), reused 0 (delta 0)
-remote: 
-remote: 
-remote: Repository does not have "hooks.redmine_gitolite.key" set. Skipping hook.[K
-remote: 
-remote: 
-To gitadmin@agile.neevtech.com:freshers-2013/rails-2.git
-   3202882..6a09cfe  master -> master
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git add .
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git commit -m ""c"l"e"[1P"[1P"[1P"w"o"r"k"i"[1P"[1P"[1P"[1P"[1P"o"u"t" "o"f" "s"t"o"c"k" "a"d"d"e"d"
-[master 0850628] out of stock added
- 3 files changed, 102 insertions(+), 4 deletions(-)
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git pull origin master
-From agile.neevtech.com:freshers-2013/rails-2
- * branch            master     -> FETCH_HEAD
-Already up-to-date.
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git push origin master
-Counting objects: 19, done.
-Delta compression using up to 4 threads.
-Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
-Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 2.93 KiB, done.
-Total 10 (delta 7), reused 0 (delta 0)
-remote: 
-remote: 
-remote: Repository does not have "hooks.redmine_gitolite.key" set. Skipping hook.[K
-remote: 
-remote: 
-To gitadmin@agile.neevtech.com:freshers-2013/rails-2.git
-   6a09cfe..0850628  master -> master
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git add .
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git commit -m ""a"d"d"r"e"s"s" "i"n" "p"r"o"g"r"e"s"s"
-[master 98d74c1] address in progress
- 5 files changed, 46 insertions(+), 10 deletions(-)
- create mode 100644 online_shopping/app/views/homes/generate_bill.html.erb
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git pull origin master
-remote: Counting objects: 25, done.[K
-remote: Compressing objects:   7% (1/13)   [Kremote: Compressing objects:  15% (2/13)   [Kremote: Compressing objects:  23% (3/13)   [Kremote: Compressing objects:  30% (4/13)   [Kremote: Compressing objects:  38% (5/13)   [Kremote: Compressing objects:  46% (6/13)   [Kremote: Compressing objects:  53% (7/13)   [Kremote: Compressing objects:  61% (8/13)   [Kremote: Compressing objects:  69% (9/13)   [Kremote: Compressing objects:  76% (10/13)   [Kremote: Compressing objects:  84% (11/13)   [Kremote: Compressing objects:  92% (12/13)   [Kremote: Compressing objects: 100% (13/13)   [Kremote: Compressing objects: 100% (13/13), done.[K
-remote: Total 14 (delta 10), reused 0 (delta 0)[K
-Unpacking objects:   7% (1/14)   Unpacking objects:  14% (2/14)   Unpacking objects:  21% (3/14)   Unpacking objects:  28% (4/14)   Unpacking objects:  35% (5/14)   Unpacking objects:  42% (6/14)   Unpacking objects:  50% (7/14)   Unpacking objects:  57% (8/14)   Unpacking objects:  64% (9/14)   Unpacking objects:  71% (10/14)   Unpacking objects:  78% (11/14)   Unpacking objects:  85% (12/14)   Unpacking objects:  92% (13/14)   Unpacking objects: 100% (14/14)   Unpacking objects: 100% (14/14), done.
-From agile.neevtech.com:freshers-2013/rails-2
- * branch            master     -> FETCH_HEAD
-Auto-merging online_shopping/app/views/bills/show.html.erb
-Merge made by the 'recursive' strategy.
- online_shopping/app/views/addresses/_form.html.erb |   30 ++++++++++++++++++--
- online_shopping/app/views/addresses/new.html.erb   |    5 +---
- online_shopping/app/views/bills/show.html.erb      |    7 ++++-
- .../app/views/product_details/_form.html.erb       |    5 +++-
- .../app/views/product_details/index.html.erb       |    2 ++
- .../app/views/product_details/show.html.erb        |    6 ++++
- 6 files changed, 47 insertions(+), 8 deletions(-)
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git pull origin master[1P[2@^[[1@[[1@3[1@~[1P[1P[1P[2P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P master[1Pmaster[1Paster[1Pster[1Pter[1Per[1Pr[Kadd .
-]0;hemant@hemant: ~/RubyProject/rails-2/online_shoppinghemant@hemant:~/RubyProject/rails-2/online_shopping$ git status
-# On branch master
-# Your branch is ahead of 'origin/master' by 3 commits.
-#
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   app/views/homes/generate_bill.html.erb
-#
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	deleted:    Gemfile.orig
-#	deleted:    app/controllers/application_controller.rb.orig
-#	deleted:    app/views/homes/_users.html.erb.orig
-#	deleted:    app/views/homes/index.html.erb.orig
-#	deleted:    app/views/homes/show.js.erb
-#	deleted:    app/views/layouts/_navigation.html.erb~
-#	deleted:    config/.routes.rb.BASE.7446.rb.swp
-#	deleted:    config/.routes.rb.LOCAL.7446.rb.swp
-#	deleted:    co

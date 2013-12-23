@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  date: 2013-12-12 20:17:49
-  total_amount: 9.99
-
-two:
-  date: 2013-12-12 20:17:49
-  total_amount: 9.99
