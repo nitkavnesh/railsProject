@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20131216111856) do
     t.integer  "unique_id"
     t.boolean  "available",  default: true
     t.integer  "product_id"
+
     t.datetime "created_at"
     t.datetime "updated_at"
   end

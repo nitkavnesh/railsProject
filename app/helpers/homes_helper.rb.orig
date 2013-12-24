@@ -1,9 +1,0 @@
-module HomesHelper
-<<<<<<< HEAD
-	
-=======
-	def get_parent_name(id)
-		Category.find(id).name rescue nil
-	end
->>>>>>> e3571e9a188b234f27884f4a474dd144102fdf0d
-end

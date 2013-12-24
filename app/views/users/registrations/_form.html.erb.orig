@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
   <!-- form for sign up of users   -->
+>>>>>>> a585297b785d5a006ea29062e3e4203b3bf8ae23
   <br><br><br><br>
   <div class="container">
     <div class="row">
@@ -8,6 +11,7 @@
 
         <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>       
+
         <div><%= f.label :Name %><br />
         <%= f.text_field :name %></div>
 

@@ -1,2 +1,5 @@
+<<<<<<< HEAD
+=======
 <!--  jquery for rendering form     -->
+>>>>>>> a585297b785d5a006ea29062e3e4203b3bf8ae23
 $("#details").html(" <%= escape_javascript(render("form")) %>");

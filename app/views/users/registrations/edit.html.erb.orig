@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> a585297b785d5a006ea29062e3e4203b3bf8ae23
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>

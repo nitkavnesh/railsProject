@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20131215081515) do
-=======
 ActiveRecord::Schema.define(version: 20131216111856) do
->>>>>>> e3571e9a188b234f27884f4a474dd144102fdf0d
 
   create_table "addresses", force: true do |t|
     t.text     "address"
@@ -61,7 +57,15 @@ ActiveRecord::Schema.define(version: 20131216111856) do
 
   create_table "product_details", force: true do |t|
     t.integer  "unique_id"
+    t.boolean  "available",  default: true
     t.integer  "product_id"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    t.boolean  "available",  default: true, null: false
+=======
+>>>>>>> 0b6b3cc625c4c57e893374b7047aa6a147a089f4
+>>>>>>> a585297b785d5a006ea29062e3e4203b3bf8ae23
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,8 +73,7 @@ ActiveRecord::Schema.define(version: 20131216111856) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.decimal  "price",                          precision: 10, scale: 0
-    t.string   "image",              limit: 256
+    t.decimal  "price",              precision: 10, scale: 0
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -84,11 +87,6 @@ ActiveRecord::Schema.define(version: 20131216111856) do
 
   create_table "roles", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tests", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,13 +1,16 @@
 class AddressesController < ApplicationController
   def index
+    #get all the adress in the index page
   	@addresses = Address.all
   end
 
   def new
+    #to add new adress
   	@address = Address.new
   end
 
   def create
+    #create the new address  
   	@address = Address.new(get_address_parameter)
     @address.user_id=current_user.id
     @address.save!

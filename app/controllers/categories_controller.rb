@@ -1,9 +1,11 @@
 class CategoriesController < ApplicationController
   def index
+    #to display all the categories in the index page
     @categories = Category.all
   end
 
   def new
+    #to add new category
     @category=Category.new
   end
 
