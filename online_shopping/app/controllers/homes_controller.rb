@@ -17,7 +17,6 @@ class HomesController < ApplicationController
   end
 
   def subcategory
-    p params[:id]
   	category_id=Category.find_by_name(params[:id]).id
     @categories2 = Category.where(parent_id: category_id)
     @products = Product.where(category_id: category_id)
@@ -80,4 +79,30 @@ class HomesController < ApplicationController
   end
   helper_method :check_availabilty
 
+  def search
+    #code for searching products 
+    @search_product = Product.search do
+      fulltext params[:search]
+    end
+    if @search_product
+      @search_products = @search_product.results
+    end
+
+    # code for searching category and display related content 
+    @search_category = Category.search do
+      fulltext params[:search]
+    end
+
+    if @search_category
+      @result_categories = @search_category.results
+      @result_categories.each do |cat_id|
+        @srch_cat_id = cat_id
+      end
+
+      if @srch_cat_id
+        @search_sub_cats = Category.where(parent_id: @srch_cat_id)
+      end
+    end
+
+  end
 end

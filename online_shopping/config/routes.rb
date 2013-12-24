@@ -10,11 +10,11 @@ OnlineShopping::Application.routes.draw do
   get "bills/new"
   get "bills/create"
   get "bills/show" 
-
+  root 'homes#index'
   resources :bills
-get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
- get '/homes/generate_bill', :controller => 'homes', :action => 'generate_bill'
- get '/homes/subcategory/:id', :controller => 'homes', :action => 'subcategory'
+  get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
+  get '/homes/generate_bill', :controller => 'homes', :action => 'generate_bill'
+  get '/homes/subcategory/:id', :controller => 'homes', :action => 'subcategory'
   resources :homes
 
   resources :carts do 
@@ -32,9 +32,8 @@ get '/bills/display_bill', :controller => 'bills', :action => 'display_bill'
   get "addresses/index"
   get "roles/index"
   get "categories/index"
-
+  post "homes/search" => 'homes#search'
   # devise_for :users
-  root 'homes#index'
   match '/homes/add_in_cart/:id' => 'homes#add_in_cart', as: :homes_add_in_cart, via: [:get, :post]
   #get "homes/index"
   match 'subcategory/:id' => 'homes#subcategory', as: :homes_subcategory, via: [:get, :post]

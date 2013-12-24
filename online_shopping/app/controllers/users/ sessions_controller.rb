@@ -16,6 +16,7 @@ class Users::SessionsController < Devise::SessionsController
       session[:return_to] = nil
     else
       respond_with resource, :location => after_sign_in_path_for(resource)
+    end
     
   end
 

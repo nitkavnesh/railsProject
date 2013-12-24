@@ -16,19 +16,22 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="#">
+					<a href="/">
 						<img id="iCartLogo" src="/assets/site_logo.png" style="width: 65px; height: 45px;"  class="img-responsive" alt="Responsive image" />
 					</a>
 				</li>
 
 				<li style="margin-top: 13px; float: left;">
-					<input type="text" class="form-control" placeholder="search product, category or brand" id="query" name="query" value="" style="width: 700px;">
-				</li>
-
-				<li style="margin-top: 13px; float: left;">
-					<button type="submit" class="btn btn-success" style="float: left;">
-						<span class="glyphicon glyphicon-search"></span>
-					</button>
+					<ul class="ulBullet">
+						<%= form_tag homes_search_path, :method => :post do %>
+							<li style="margin-top: 13px; float: left;">
+								<%= text_field_tag :search, params[:search], :class=>"form-control search-field", :placeholder => "search product, category or brand" %>
+							</li>
+							<li style="margin-top: 13px; float: left;">
+								<%= submit_tag "search", :name => nil, :class=>"btn btn-primary btn-size" %>
+							</li>
+						<% end%>
+					</ul>
 				</li>
 
 			</ul>

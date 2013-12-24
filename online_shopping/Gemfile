@@ -45,9 +45,11 @@ end
 
 gem "prototype-rails", "~> 4.0.0"
 
-## gem for searching 
-gem "thinking-sphinx", "~> 3.0.2"
+## gem for searching
+gem 'sunspot_rails'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 
+gem 'progress_bar'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
