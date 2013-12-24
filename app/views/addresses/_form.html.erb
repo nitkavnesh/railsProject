@@ -1,0 +1,54 @@
+  <script type="text/javascript">
+       $.validate(); 
+    </script>
+<!-- form for address details of users with previous addresses  -->
+<div class="modal-body row">
+  <div class="col-md-4">
+  	<% if user_signed_in?  %>
+  	  <h3>Existing Adresses</h3>    
+      <% Address.where(:user_id=>current_user.id).to_a.each do |address|  %>
+        <%= link_to(bills_create_path(address_id: address.id)) do %>
+          <%= address.address %>
+      	  <%= address.landmark %><br/>
+      		<%= "#{address.city} #{address.state}" %><br/>  		
+      		<%= "#{address.country} , #{address.pincode}" %><br/>
+        <% end -%>
+        <br>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- new shipping address details  -->
+  <div class="col-md-5">
+  	<h3> New Shipping Address</h3>
+    <%= form_for @address  do |f| %>
+      <div>      
+      <%= f.text_area :address,  :class=> "form-control ",:placeholder=>"Address", 'data-validation' => "required" %>
+      </div>
+      <div>
+      <%= f.text_field :landmark,  :class=> "form-control",:placeholder=>"landmark", 'data-validation'=>"required" %>
+      </div>
+      <div>
+      <%= f.text_field :pincode,  :class=> "form-control",:placeholder=>"Pincode", 'data-validation'=>"required" %>
+      </div>
+      <div>
+      <%= f.text_field :city,  :class=> "form-control",:placeholder=>"City", 'data-validation'=> "required" %>
+      </div>
+      <div>
+      <%= f.text_field :state,  :class=> "form-control",:placeholder=>"State", 'data-validation'=>"required" %>
+      </div>
+      <div>
+      <%= f.text_field :country,  :class=> "form-control",:placeholder=>"Country",'data-validation'=>"required" %>
+      </div><br/>
+      <%= f.submit :class=>"btn btn-primary mrg_top" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+

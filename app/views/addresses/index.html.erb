@@ -1,0 +1,45 @@
+<div class="container" style="margin-top: 75px;">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Listing Address</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Address</th>
+            <th>Landmark</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Pincode</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @addresses.each do |address| %>
+            <tr>                   
+              <td><%= User.find(address.user_id).name  %></td>
+              <td><%= address.address %></td>
+              <td><%= address.landmark %></td>
+              <td><%= address.city %></td>
+              <td><%= address.state %></td>
+              <td><%= address.country %></td>
+              <td><%= address.pincode %></td>
+              <td><%= link_to 'Show', address, :class=>"mrg_left" %></td>
+              <td><%= link_to 'Edit', edit_address_path(address), :class=>"mrg_left" %></td>
+              <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"mrg_left" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Address', new_address_path %>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
