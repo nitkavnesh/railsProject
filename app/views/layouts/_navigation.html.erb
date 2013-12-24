@@ -51,7 +51,7 @@
 					  <% end -%>
 					</li>
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">					
-						<%= link_to "Welcome #{current_user.name}"  %>
+						<%= link_to "Welcome #{current_user.name}", '/'  %>
 					</li>		
 
 					<li class="text-right" style="margin-top: 13px; margin-right: 2px;">
@@ -80,7 +80,7 @@
                      <li><%= link_to 'products', products_path %></li>
                      <li><%= link_to 'Bill detail', bills_path %></li>
                      <li><%= link_to 'products detail', product_details_path%></li>
-                       <li><%= link_to 'Users detail', :controller => 'homes', :action => 'user_details' %></li>
+                       <li><%= link_to 'Users detail', homes_user_details_path %></li>
 
                   </ul>
 				</div>

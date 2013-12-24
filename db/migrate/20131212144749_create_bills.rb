@@ -3,7 +3,7 @@ class CreateBills < ActiveRecord::Migration
     create_table :bills do |t|
       t.datetime :date
       t.decimal :total_amount
-      t.belongs_to :address_id
+      t.belongs_to :address
       t.belongs_to :user
      
       t.timestamps

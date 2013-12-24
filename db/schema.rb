@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20131216111856) do
   create_table "bills", force: true do |t|
     t.datetime "date"
     t.decimal  "total_amount", precision: 10, scale: 0
+    t.integer  "address_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,7 +60,6 @@ ActiveRecord::Schema.define(version: 20131216111856) do
     t.integer  "unique_id"
     t.boolean  "available",  default: true
     t.integer  "product_id"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
