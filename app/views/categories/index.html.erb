@@ -27,9 +27,8 @@
             <tr>
               <td><%= category.name %></td>
               <td><%= get_parent_name(category.parent_id) %></td>
-              <% if category.image?%>
                 <td><img src="<%= category.image %>" style="height:50px;width:50px;" alt="No image"/></td>
-              <% end %>
+
               <td><%= link_to 'Show', category, :class=>"mrg_left" %></td>
               <td><%= link_to '', edit_category_path(category), :class=>"glyphicon glyphicon-edit",:title=>"edit"%></td>
               <td><%= link_to '', category, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"glyphicon glyphicon-trash", :title=>"delete"%></td>

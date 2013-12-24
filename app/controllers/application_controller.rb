@@ -29,7 +29,9 @@ end
   session[:account_type] = current_user.account_type
   user_path(resource)
 end
+
 def ensure_setting
     @categories = Category.all
 end
+
 end

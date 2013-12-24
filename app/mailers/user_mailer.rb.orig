@@ -1,0 +1,17 @@
+class UserMailer < ActionMailer::Base
+ default from: "roronlineshopping@gmail.com"
+<<<<<<< HEAD
+ # welcome email for user after sign up
+=======
+
+>>>>>>> 9c48a2f81c626cdd9068973fabd9dcfcf752c994
+  def welcome_email(user,password)
+  	@user = user["name"]
+  	@email = user[:email]
+  	@password=password
+  	@url = "http://localhost:3000/users/sign_in"
+  	mail(to: @email, subject:"Login your account")
+  end
+
+
+end

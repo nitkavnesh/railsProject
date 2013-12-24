@@ -24,7 +24,7 @@ class BillsController < ApplicationController
         end
         @bill.total_amount=total_amount
         @bill.save!        
-      end      
+      end
       redirect_to bills_show_path :id => @bill.id 
     end    
   end
