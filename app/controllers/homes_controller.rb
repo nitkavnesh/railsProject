@@ -1,8 +1,8 @@
 class HomesController < ApplicationController
-  
   def index
   	@categories = Category.all
   end
+
   def show  	
   end
 
@@ -19,7 +19,6 @@ class HomesController < ApplicationController
   def user_details
     @user_details=User.all
   end
-
 
   def subcategory
   	category_id=Category.find_by_name(params[:id]).id
@@ -49,8 +48,7 @@ class HomesController < ApplicationController
     end
   end
 
-
-## checking tyhe availabilty
+  ## checking tyhe availabilty
   def check_availabilty(product_id)    
     requested_product=0    
     session[:temporary_shopping_cart].each do |product_hash|      
@@ -86,29 +84,47 @@ class HomesController < ApplicationController
   helper_method :check_availabilty
 
   def search
-    #code for searching products 
-    @search_product = Product.search do
-      fulltext params[:search]
-    end
-    if @search_product
-      @search_products = @search_product.results
-    end
-
     # code for searching category and display related content 
-    @search_category = Category.search do
-      fulltext params[:search]
+    @search_categories = Category.search do
+      fulltext (params[:search]).strip
     end
 
-    if @search_category
-      @result_categories = @search_category.results
-      @result_categories.each do |cat_id|
+    if @search_categories
+      @result_categories_result = @search_categories.results
+      @result_categories_result.each do |cat_id|
         @srch_cat_id = cat_id
       end
 
       if @srch_cat_id
         @search_sub_cats = Category.where(parent_id: @srch_cat_id)
+        @child_categories = Category.where('id not in(?)', Category.all.map(&:parent_id)- [nil]).to_a
+        @child_categories.each do |child_category|
+          if child_category == @srch_cat_id
+            @search_cat_product = @srch_cat_id
+          end
+        end
+        if @search_cat_product
+          cat_id=Category.find_by_name(@search_cat_product.name).id
+          @search_products = Product.where(category_id: cat_id)
+        else
+          @search_cat_product = nil
+          @search_products = nil
+        end
       end
     end
+    #code for searching products 
+    @srch_products = Product.search do
+      fulltext (params[:search]).strip
+    end
+    if @srch_products
+      @search_products_result = @srch_products.results
+    end
 
+    p "1111111111111111111"
+    p @search_categories
+    p "22222222222222222222"
+    p @srch_products
+    p "3333333333333333333"
   end
+
 end

@@ -15,3 +15,18 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$( document ).ready(function() {
+	if($('#search').val() == "")
+	{
+    $('.btn.btn-primary.btn-size').attr('disabled', true);
+  }
+
+  $('#search').keyup(function(){
+  	alert($('#search').val());
+    if($('#search').val() !=  "") 
+      $('.btn.btn-primary.btn-size').attr('disabled', false);    
+		else
+   		$('.btn.btn-primary.btn-size').attr('disabled', true);   
+	});
+});
